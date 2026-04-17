@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITRB Content Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #191e29;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Login Styles */
+        .login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #00e5c1 url(../images/bckgr_login.svg) no-repeat;
+            display: flex;
+            background-position: top center;
+            background-size: 100% auto;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .login-box {
+            background: #001f3f;
+            padding: 40px;
+            border-radius: 16px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .login-box h2 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .login-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .login-box .form-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .login-box .form-group svg {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            stroke: #64748b;
+        }
+
+        .login-box .form-group input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #0f172a;
+            color: white;
+        }
+
+        .login-box .form-group input::placeholder {
+            color: #64748b;
+        }
+
+        .login-box img {
+            margin: 0 auto 20px;
+            display: block;
+            max-width: 180px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .login-box button:hover {
+            background: #2563eb;
+        }
+
+        .login-box button:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            color: #ef4444;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        .logout-btn:hover {
+            background: #dc2626;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .page-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            padding: 10px 20px;
+            background: #e0e0e0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .page-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .section-selector {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .section-btn {
+            padding: 6px 12px;
+            background: #e0e0e0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .section-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .lang-tab {
+            padding: 8px 16px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .lang-tab.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            margin-bottom: -11px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .repeater-item {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .add-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .save-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .save-status.saving {
+            background: #ffc107;
+        }
+
+        .save-status.error {
+            background: #dc3545;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .main-content {
+            display: none;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .local-mode-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #f59e0b;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #mainContent h1 {
+            color: #fff;
+        }
+
+        #mainContent h2 {
+            margin: 0 0 20px;
+            color: #fff;
+        }
+
+        #mainContent h1 img {
+            max-width: 120px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Login Overlay -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+            <img src="images/logo-white.svg" alt="ITRB Ltd." />
+            <h2>ITRB Content Manager</h2>
+            <p>Enter your credentials to access</p>
+            <div class="form-group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <input type="email" id="loginEmail" placeholder="Email" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <input type="password" id="loginPassword" placeholder="Password"
+                    onkeypress="if(event.key==='Enter') login()">
+            </div>
+            <button id="loginBtn" onclick="login()">Login</button>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content">
+        <div class="container">
+            <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+            <h1><img src="images/logo-white.svg" alt="ITRB Ltd." /></h1>
+            <h2>ITRB Content Manager</h2>
+
+            <div class="page-tabs" id="pageTabs"></div>
+            <div class="section-selector" id="sectionSelector"></div>
+
+            <div class="form-card" id="formContainer">Loading...</div>
+
+            <div class="save-status" id="saveStatus">● Auto-save</div>
+        </div>
+    </div>
+
+    <script>
+        // ========================
+        // Detect environment
+        // ========================
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+        // API endpoints
+        const API = {
+            login: isLocalhost ? null : 'login.php',
+            save: isLocalhost ? null : 'save-content.php',
+            load: isLocalhost ? 'data/content.json' : 'save-content.php'
+        };
+
+        console.log('Running in', isLocalhost ? 'LOCAL mode (Download JSON only)' : 'SERVER mode (with PHP)');
+
+        // ========================
+        // Authentication (only on server)
+        // ========================
+        let isLoggedIn = false;
+
+        async function checkAuth() {
+            if (isLocalhost) {
+                // Local mode - no login required
+                isLoggedIn = true;
+                document.getElementById('loginOverlay').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                load();
+                return;
+            }
+
+            try {
+                const res = await fetch(API.login, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await res.json();
+
+                if (data.logged_in) {
+                    isLoggedIn = true;
+                    document.getElementById('loginOverlay').style.display = 'none';
+                    document.getElementById('mainContent').style.display = 'block';
+                    load();
+                } else {
+                    isLoggedIn = false;
+                    document.getElementById('loginOverlay').style.display = 'flex';
+                    document.getElementById('mainContent').style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Auth check failed:', error);
+                document.getElementById('loginOverlay').style.display = 'flex';
+                document.getElementById('mainContent').style.display = 'none';
+            }
+        }
+
+        async function login() {
+            if (isLocalhost) {
+                // Local mode - just show content
+                isLoggedIn = true;
+                document.getElementById('loginOverlay').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                load();
+                return;
+            }
+
+            const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+            const password = document.getElementById('loginPassword').value;
+            const errorDiv = document.getElementById('loginError');
+            const loginBtn = document.getElementById('loginBtn');
+
+            if (!email || !password) {
+                errorDiv.textContent = 'Please enter email and password';
+                return;
+            }
+
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '<span class="loading-spinner"></span> Logging in...';
+
+            try {
+                const res = await fetch(API.login, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    isLoggedIn = true;
+                    document.getElementById('loginOverlay').style.display = 'none';
+                    document.getElementById('mainContent').style.display = 'block';
+                    load();
+                } else {
+                    errorDiv.textContent = data.error || 'Invalid email or password';
+                    document.getElementById('loginPassword').value = '';
+                }
+            } catch (error) {
+                errorDiv.textContent = 'Connection error. Please try again.';
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = 'Login';
+            }
+        }
+
+        async function logout() {
+            if (isLocalhost) {
+                // Local mode - just hide content and show login
+                isLoggedIn = false;
+                document.getElementById('mainContent').style.display = 'none';
+                document.getElementById('loginOverlay').style.display = 'flex';
+                return;
+            }
+
+            try {
+                await fetch(API.login, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+
+            isLoggedIn = false;
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('loginOverlay').style.display = 'flex';
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('loginError').textContent = '';
+        }
+
+        // ========================
+        // Data
+        // ========================
+        let content = null;
+        let currentPage = 'home';
+        let currentLang = 'en';
+        let currentSection = null;
+        let saveTimeout = null;
+
+        // Страници и секции
+        const pages = {
+            home: {
+                name: '🏠 Home Page',
+                sections: ['hero', 'whatWeDo', 'services', 'ourEdge', 'approach', 'contactCta']
+            },
+            services: {
+                name: '🛠️ Services Page',
+                sections: ['servicesPage']
+            },
+            whoWeAre: {
+                name: '👥 Who We Are',
+                sections: ['whoWeAre', 'team']
+            },
+            careers: {
+                name: '💼 Careers Page',
+                sections: ['careers']
+            },
+            contact: {
+                name: '📞 Contact Page',
+                sections: ['contact']
+            }
+        };
+
+        // ========================
+        // Load JSON
+        // ========================
+        async function load() {
+            try {
+                const url = API.load + '?v=' + Date.now();
+                const res = await fetch(url);
+                if (res.ok) {
+                    content = await res.json();
+                    console.log('Loaded:', content);
+                } else {
+                    throw new Error('No file');
+                }
+            } catch (e) {
+                content = { en: {}, bg: {} };
+            }
+            currentSection = pages[currentPage].sections[0];
+            render();
+        }
+
+        // ========================
+        // Save JSON (auto-save)
+        // ========================
+        async function save() {
+            if (!content) return;
+
+            const status = document.getElementById('saveStatus');
+
+            if (isLocalhost) {
+                // Local mode - download JSON
+                downloadJSON();
+                status.innerHTML = '✓ Downloaded';
+                status.className = 'save-status';
+                setTimeout(() => {
+                    if (document.getElementById('saveStatus')) {
+                        document.getElementById('saveStatus').innerHTML = '● Download JSON';
+                    }
+                }, 2000);
+                return;
+            }
+
+            // Server mode - save via PHP
+            status.innerHTML = '● Saving...';
+            status.className = 'save-status saving';
+
+            try {
+                const res = await fetch(API.save, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(content)
+                });
+                const result = await res.json();
+                if (result.success) {
+                    status.innerHTML = '✓ Saved';
+                    status.className = 'save-status';
+                    setTimeout(() => {
+                        if (document.getElementById('saveStatus')) {
+                            document.getElementById('saveStatus').innerHTML = '● Auto-save';
+                        }
+                    }, 2000);
+                } else {
+                    throw new Error('Save failed');
+                }
+            } catch (e) {
+                status.innerHTML = '✗ Error - downloading';
+                status.className = 'save-status error';
+                downloadJSON(); // fallback
+                setTimeout(() => {
+                    if (document.getElementById('saveStatus')) {
+                        document.getElementById('saveStatus').innerHTML = isLocalhost ? '● Download JSON' : '● Auto-save';
+                        document.getElementById('saveStatus').className = 'save-status';
+                    }
+                }, 3000);
+            }
+        }
+
+        function triggerSave() {
+            clearTimeout(saveTimeout);
+            saveTimeout = setTimeout(() => save(), 1500);
+            const status = document.getElementById('saveStatus');
+            if (!isLocalhost) {
+                status.innerHTML = '● Saving...';
+                status.className = 'save-status saving';
+            }
+        }
+
+        // ========================
+        // Helper
+        // ========================
+        function getSectionData(section, lang) {
+            if (!content[lang]) return null;
+            return content[lang][section];
+        }
+
+        // ========================
+        // Download JSON (backup)
+        // ========================
+        function downloadJSON() {
+            const dataStr = JSON.stringify(content, null, 2);
+            const link = document.createElement('a');
+            link.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+            link.download = 'content.json';
+            link.click();
+        }
+
+        // ========================
+        // Render
+        // ========================
+        function render() {
+            renderPageTabs();
+            renderSectionSelector();
+            renderForm();
+        }
+
+        function renderPageTabs() {
+            const container = document.getElementById('pageTabs');
+            container.innerHTML = Object.keys(pages).map(key => `
+                <button class="page-btn ${currentPage === key ? 'active' : ''}" onclick="switchPage('${key}')">
+                    ${pages[key].name}
+                </button>
+            `).join('');
+        }
+
+        function renderSectionSelector() {
+            const sections = pages[currentPage].sections;
+            const container = document.getElementById('sectionSelector');
+            container.innerHTML = sections.map(section => `
+                <button class="section-btn ${currentSection === section ? 'active' : ''}" onclick="switchSection('${section}')">
+                    ${section}
+                </button>
+            `).join('');
+        }
+
+        function renderForm() {
+            let html = `
+                <div class="lang-tabs">
+                    <button class="lang-tab ${currentLang === 'en' ? 'active' : ''}" onclick="switchLang('en')">🇬🇧 ENGLISH</button>
+                    <button class="lang-tab ${currentLang === 'bg' ? 'active' : ''}" onclick="switchLang('bg')">🇧🇬 БЪЛГАРСКИ</button>
+                </div>
+            `;
+
+            const langData = getSectionData(currentSection, currentLang);
+            if (langData) {
+                html += renderFields(langData, currentSection);
+            } else {
+                html += '<p>No data for this section. Start editing!</p>';
+            }
+
+            document.getElementById('formContainer').innerHTML = html;
+        }
+
+        function renderFields(data, section) {
+            // Hero section
+            if (section === 'hero') {
+                return `
+                    <div class="form-group"><label>title1</label><textarea onchange="updateField('${section}', '${currentLang}', 'title1', this.value)">${escape(data.title1 || '')}</textarea></div>
+                    <div class="form-group"><label>title2</label><textarea onchange="updateField('${section}', '${currentLang}', 'title2', this.value)">${escape(data.title2 || '')}</textarea></div>
+                    <div class="form-group"><label>subtitle</label><textarea onchange="updateField('${section}', '${currentLang}', 'subtitle', this.value)">${escape(data.subtitle || '')}</textarea></div>
+                    <div class="form-group"><label>subtitle2</label><textarea onchange="updateField('${section}', '${currentLang}', 'subtitle2', this.value)">${escape(data.subtitle2 || '')}</textarea></div>
+                    <div class="form-group"><label>cta</label><input type="text" value="${escape(data.cta || '')}" onchange="updateField('${section}', '${currentLang}', 'cta', this.value)"></div>
+                `;
+            }
+
+            // What We Do
+            if (section === 'whatWeDo') {
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>p1</label><textarea onchange="updateField('${section}', '${currentLang}', 'p1', this.value)">${escape(data.p1 || '')}</textarea></div>
+                    <div class="form-group"><label>p2</label><textarea onchange="updateField('${section}', '${currentLang}', 'p2', this.value)">${escape(data.p2 || '')}</textarea></div>
+                `;
+            }
+
+            // Services (home page)
+            if (section === 'services') {
+                let itemsHtml = '';
+                if (data.items && data.items.length) {
+                    itemsHtml = data.items.map((item, i) => `
+                        <div class="repeater-item">
+                            <button class="remove-btn" onclick="removeServiceItem(${i})">✕</button>
+                            <div class="form-group"><label>name</label><input type="text" value="${escape(item.name)}" onchange="updateServiceItem(${i}, 'name', this.value)"></div>
+                            <div class="form-group"><label>desc</label><textarea onchange="updateServiceItem(${i}, 'desc', this.value)">${escape(item.desc)}</textarea></div>
+                        </div>
+                    `).join('');
+                }
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    ${itemsHtml}
+                    <button class="add-btn" onclick="addServiceItem()">+ Add Service</button>
+                    <div class="form-group"><label>cta</label><input type="text" value="${escape(data.cta || '')}" onchange="updateField('${section}', '${currentLang}', 'cta', this.value)"></div>
+                `;
+            }
+
+            // Our Edge
+            if (section === 'ourEdge') {
+                let itemsHtml = '';
+                if (data.items && data.items.length) {
+                    itemsHtml = data.items.map((item, i) => `
+                        <div class="repeater-item">
+                            <button class="remove-btn" onclick="removeEdgeItem(${i})">✕</button>
+                            <div class="form-group"><label>title</label><input type="text" value="${escape(item.title)}" onchange="updateEdgeItem(${i}, 'title', this.value)"></div>
+                            <div class="form-group"><label>desc</label><textarea onchange="updateEdgeItem(${i}, 'desc', this.value)">${escape(item.desc)}</textarea></div>
+                        </div>
+                    `).join('');
+                }
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    ${itemsHtml}
+                    <button class="add-btn" onclick="addEdgeItem()">+ Add Edge Point</button>
+                `;
+            }
+
+            // Approach
+            if (section === 'approach') {
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>intro</label><textarea onchange="updateField('${section}', '${currentLang}', 'intro', this.value)">${escape(data.intro || '')}</textarea></div>
+                    <div class="form-group"><label>lifecycleLabel</label><input type="text" value="${escape(data.lifecycleLabel || '')}" onchange="updateField('${section}', '${currentLang}', 'lifecycleLabel', this.value)"></div>
+                    <div class="form-group"><label>steps</label><textarea onchange="updateField('${section}', '${currentLang}', 'steps', this.value)">${escape(data.steps || '')}</textarea></div>
+                    <div class="form-group"><label>para</label><textarea onchange="updateField('${section}', '${currentLang}', 'para', this.value)">${escape(data.para || '')}</textarea></div>
+                    <div class="form-group"><label>envs</label><textarea onchange="updateField('${section}', '${currentLang}', 'envs', this.value)">${escape(data.envs || '')}</textarea></div>
+                    <div class="form-group"><label>cta</label><input type="text" value="${escape(data.cta || '')}" onchange="updateField('${section}', '${currentLang}', 'cta', this.value)"></div>
+                `;
+            }
+
+            // Contact CTA
+            if (section === 'contactCta') {
+                return `
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>desc</label><textarea onchange="updateField('${section}', '${currentLang}', 'desc', this.value)">${escape(data.desc || '')}</textarea></div>
+                    <div class="form-group"><label>cta</label><input type="text" value="${escape(data.cta || '')}" onchange="updateField('${section}', '${currentLang}', 'cta', this.value)"></div>
+                `;
+            }
+
+            // ========================
+            // SERVICES PAGE
+            // ========================
+            if (section === 'servicesPage') {
+                let itemsHtml = '';
+                if (data.items && data.items.length) {
+                    itemsHtml = data.items.map((item, i) => `
+                        <div class="repeater-item">
+                            <button class="remove-btn" onclick="removeServicePageItem(${i})">✕</button>
+                            <div class="form-group"><label>num</label><input type="text" value="${escape(item.num)}" onchange="updateServicePageItem(${i}, 'num', this.value)"></div>
+                            <div class="form-group"><label>title</label><input type="text" value="${escape(item.title)}" onchange="updateServicePageItem(${i}, 'title', this.value)"></div>
+                            <div class="form-group"><label>desc</label><textarea onchange="updateServicePageItem(${i}, 'desc', this.value)">${escape(item.desc)}</textarea></div>
+                            <div><label>list items</label>
+                                ${item.list ? item.list.map((li, liIdx) => `
+                                    <div class="repeater-item" style="margin-left: 20px;">
+                                        <button class="remove-btn" onclick="removeListItem(${i}, ${liIdx})">✕</button>
+                                        <input type="text" value="${escape(li)}" onchange="updateListItem(${i}, ${liIdx}, this.value)" style="width:100%">
+                                    </div>
+                                `).join('') : ''}
+                                <button class="add-btn" onclick="addListItem(${i})">+ Add List Item</button>
+                            </div>
+                            ${item.sub1 ? `
+                                <div><label>sub1.title</label><input type="text" value="${escape(item.sub1.title)}" onchange="updateSubField(${i}, 'sub1', 'title', this.value)"></div>
+                                <div><label>sub1.list items</label>
+                                    ${item.sub1.list ? item.sub1.list.map((li, liIdx) => `
+                                        <div class="repeater-item" style="margin-left: 20px;">
+                                            <button class="remove-btn" onclick="removeSubListItem(${i}, 'sub1', ${liIdx})">✕</button>
+                                            <input type="text" value="${escape(li)}" onchange="updateSubListItem(${i}, 'sub1', ${liIdx}, this.value)" style="width:100%">
+                                        </div>
+                                    `).join('') : ''}
+                                    <button class="add-btn" onclick="addSubListItem(${i}, 'sub1')">+ Add Item</button>
+                                </div>
+                            ` : ''}
+                            ${item.sub2 ? `
+                                <div><label>sub2.title</label><input type="text" value="${escape(item.sub2.title)}" onchange="updateSubField(${i}, 'sub2', 'title', this.value)"></div>
+                                <div><label>sub2.list items</label>
+                                    ${item.sub2.list ? item.sub2.list.map((li, liIdx) => `
+                                        <div class="repeater-item" style="margin-left: 20px;">
+                                            <button class="remove-btn" onclick="removeSubListItem(${i}, 'sub2', ${liIdx})">✕</button>
+                                            <input type="text" value="${escape(li)}" onchange="updateSubListItem(${i}, 'sub2', ${liIdx}, this.value)" style="width:100%">
+                                        </div>
+                                    `).join('') : ''}
+                                    <button class="add-btn" onclick="addSubListItem(${i}, 'sub2')">+ Add Item</button>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `).join('');
+                }
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>intro</label><textarea onchange="updateField('${section}', '${currentLang}', 'intro', this.value)">${escape(data.intro || '')}</textarea></div>
+                    ${itemsHtml}
+                    <button class="add-btn" onclick="addServicePageItem()">+ Add Service</button>
+                `;
+            }
+
+            // Who We Are
+            if (section === 'whoWeAre') {
+                let html = `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>intro1</label><textarea onchange="updateField('${section}', '${currentLang}', 'intro1', this.value)">${escape(data.intro1 || '')}</textarea></div>
+                    <div class="form-group"><label>intro2</label><textarea onchange="updateField('${section}', '${currentLang}', 'intro2', this.value)">${escape(data.intro2 || '')}</textarea></div>
+                    
+                    <h3 style="margin: 20px 0 10px;">Approach Section</h3>
+                    <div class="form-group"><label>approach.heading</label><input type="text" value="${escape(data.approach?.heading || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'approach.heading', this.value)"></div>
+                    <div class="form-group"><label>approach.desc</label><textarea onchange="updateNestedField('${section}', '${currentLang}', 'approach.desc', this.value)">${escape(data.approach?.desc || '')}</textarea></div>
+                    
+                    <h3 style="margin: 20px 0 10px;">Lifecycle</h3>
+                    <div class="form-group"><label>lifecycle.heading</label><input type="text" value="${escape(data.lifecycle?.heading || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'lifecycle.heading', this.value)"></div>
+                    <div class="form-group"><label>lifecycle.intro</label><textarea onchange="updateNestedField('${section}', '${currentLang}', 'lifecycle.intro', this.value)">${escape(data.lifecycle?.intro || '')}</textarea></div>
+                `;
+
+                if (data.lifecycle?.steps) {
+                    html += `<div><label>lifecycle steps</label>`;
+                    data.lifecycle.steps.forEach((step, i) => {
+                        html += `
+                            <div class="repeater-item">
+                                <button class="remove-btn" onclick="removeLifecycleStep(${i})">✕</button>
+                                <div class="form-group"><label>title</label><input type="text" value="${escape(step.title)}" onchange="updateLifecycleStep(${i}, 'title', this.value)"></div>
+                                <div class="form-group"><label>desc</label><textarea onchange="updateLifecycleStep(${i}, 'desc', this.value)">${escape(step.desc)}</textarea></div>
+                            </div>
+                        `;
+                    });
+                    html += `<button class="add-btn" onclick="addLifecycleStep()">+ Add Lifecycle Step</button></div>`;
+                }
+
+                html += `<h3 style="margin: 20px 0 10px;">Principles</h3>`;
+                if (data.principles?.items) {
+                    data.principles.items.forEach((item, i) => {
+                        html += `
+                            <div class="repeater-item">
+                                <button class="remove-btn" onclick="removePrinciple(${i})">✕</button>
+                                <div class="form-group"><label>title</label><input type="text" value="${escape(item.title)}" onchange="updatePrinciple(${i}, 'title', this.value)"></div>
+                                <div class="form-group"><label>desc</label><textarea onchange="updatePrinciple(${i}, 'desc', this.value)">${escape(item.desc)}</textarea></div>
+                            </div>
+                        `;
+                    });
+                }
+                html += `<button class="add-btn" onclick="addPrinciple()">+ Add Principle</button>`;
+
+                html += `<h3 style="margin: 20px 0 10px;">Industries</h3>`;
+                html += `<div class="form-group"><label>industries.heading</label><input type="text" value="${escape(data.industries?.heading || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'industries.heading', this.value)"></div>`;
+                html += `<div class="form-group"><label>industries.intro</label><textarea onchange="updateNestedField('${section}', '${currentLang}', 'industries.intro', this.value)">${escape(data.industries?.intro || '')}</textarea></div>`;
+                if (data.industries?.list) {
+                    html += `<div><label>industries list</label>`;
+                    data.industries.list.forEach((item, i) => {
+                        html += `
+                            <div class="repeater-item">
+                                <button class="remove-btn" onclick="removeIndustry(${i})">✕</button>
+                                <input type="text" value="${escape(item)}" onchange="updateIndustry(${i}, this.value)" style="width:100%">
+                            </div>
+                        `;
+                    });
+                    html += `<button class="add-btn" onclick="addIndustry()">+ Add Industry</button></div>`;
+                }
+
+                return html;
+            }
+
+            // TEAM SECTION
+            if (section === 'team') {
+                let membersHtml = '';
+                if (data.members && data.members.length) {
+                    membersHtml = data.members.map((member, i) => `
+                        <div class="repeater-item">
+                            <button class="remove-btn" onclick="removeTeamMember(${i})">✕</button>
+                            <div class="form-group"><label>name</label><input type="text" value="${escape(member.name)}" onchange="updateTeamMember(${i}, 'name', this.value)"></div>
+                            <div class="form-group"><label>role</label><input type="text" value="${escape(member.role)}" onchange="updateTeamMember(${i}, 'role', this.value)"></div>
+                            <div class="form-group"><label>bio</label><textarea onchange="updateTeamMember(${i}, 'bio', this.value)">${escape(member.bio)}</textarea></div>
+                        </div>
+                    `).join('');
+                }
+                return `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>sub</label><input type="text" value="${escape(data.sub || '')}" onchange="updateField('${section}', '${currentLang}', 'sub', this.value)"></div>
+                    <div class="form-group"><label>viewProfile</label><input type="text" value="${escape(data.viewProfile || '')}" onchange="updateField('${section}', '${currentLang}', 'viewProfile', this.value)"></div>
+                    <div><label>Team Members</label>${membersHtml}</div>
+                    <button class="add-btn" onclick="addTeamMember()">+ Add Team Member</button>
+                `;
+            }
+
+            // Contact Page
+            if (section === 'contact') {
+                let html = `
+                    <div class="form-group"><label>tag</label><input type="text" value="${escape(data.tag || '')}" onchange="updateField('${section}', '${currentLang}', 'tag', this.value)"></div>
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>desc</label><textarea onchange="updateField('${section}', '${currentLang}', 'desc', this.value)">${escape(data.desc || '')}</textarea></div>
+                    <div class="form-group"><label>address</label><input type="text" value="${escape(data.address || '')}" onchange="updateField('${section}', '${currentLang}', 'address', this.value)"></div>
+                    <div class="form-group"><label>email</label><input type="text" value="${escape(data.email || '')}" onchange="updateField('${section}', '${currentLang}', 'email', this.value)"></div>
+                    <h3 style="margin: 20px 0 10px;">Form Fields</h3>
+                    <div class="form-group"><label>form.name</label><input type="text" value="${escape(data.form?.name || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.name', this.value)"></div>
+                    <div class="form-group"><label>form.email</label><input type="text" value="${escape(data.form?.email || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.email', this.value)"></div>
+                    <div class="form-group"><label>form.subject</label><input type="text" value="${escape(data.form?.subject || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.subject', this.value)"></div>
+                    <div class="form-group"><label>form.message</label><input type="text" value="${escape(data.form?.message || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.message', this.value)"></div>
+                    <div class="form-group"><label>form.submit</label><input type="text" value="${escape(data.form?.submit || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.submit', this.value)"></div>
+                    <div class="form-group"><label>form.captcha</label><input type="text" value="${escape(data.form?.captcha || '')}" onchange="updateNestedField('${section}', '${currentLang}', 'form.captcha', this.value)"></div>
+                    <div class="form-group"><label>form.agree</label><textarea onchange="updateNestedField('${section}', '${currentLang}', 'form.agree', this.value)">${escape(data.form?.agree || '')}</textarea></div>
+                    <div class="form-group"><label>success</label><input type="text" value="${escape(data.success || '')}" onchange="updateField('${section}', '${currentLang}', 'success', this.value)"></div>
+                    <div class="form-group"><label>error</label><input type="text" value="${escape(data.error || '')}" onchange="updateField('${section}', '${currentLang}', 'error', this.value)"></div>
+                `;
+                return html;
+            }
+
+            // Careers
+            if (section === 'careers') {
+                let positionsHtml = '';
+                if (data.positions && data.positions.length) {
+                    positionsHtml = data.positions.map((job, i) => `
+                    <div class="repeater-item">
+                        <button class="remove-btn" onclick="removeCareerPosition(${i})">✕</button>
+                        <div class="form-group"><label>ID</label><input type="text" value="${escape(job.id)}" onchange="updateCareerPosition(${i}, 'id', this.value)"></div>
+                        <div class="form-group"><label>Title</label><input type="text" value="${escape(job.title)}" onchange="updateCareerPosition(${i}, 'title', this.value)"></div>
+                        <div class="form-group"><label>Location</label><input type="text" value="${escape(job.location)}" onchange="updateCareerPosition(${i}, 'location', this.value)"></div>
+                        <div class="form-group"><label>Type</label><input type="text" value="${escape(job.type)}" onchange="updateCareerPosition(${i}, 'type', this.value)"></div>
+                        <div class="form-group"><label>Description</label><textarea onchange="updateCareerPosition(${i}, 'description', this.value)">${escape(job.description)}</textarea></div>
+                        
+                        <div><label>Requirements</label>
+                            ${job.requirements ? job.requirements.map((req, ri) => `
+                                <div class="repeater-item" style="margin-left: 20px;">
+                                    <button class="remove-btn" onclick="removeCareerRequirement(${i}, ${ri})">✕</button>
+                                    <input type="text" value="${escape(req)}" onchange="updateCareerRequirement(${i}, ${ri}, this.value)" style="width:100%">
+                                </div>
+                            `).join('') : ''}
+                            <button class="add-btn" onclick="addCareerRequirement(${i})">+ Add Requirement</button>
+                        </div>
+                        
+                        <div><label>Nice to have</label>
+                            ${job.niceToHave ? job.niceToHave.map((req, ri) => `
+                                <div class="repeater-item" style="margin-left: 20px;">
+                                    <button class="remove-btn" onclick="removeCareerNiceToHave(${i}, ${ri})">✕</button>
+                                    <input type="text" value="${escape(req)}" onchange="updateCareerNiceToHave(${i}, ${ri}, this.value)" style="width:100%">
+                                </div>
+                            `).join('') : ''}
+                            <button class="add-btn" onclick="addCareerNiceToHave(${i})">+ Add Nice to Have</button>
+                        </div>
+                    </div>
+                `).join('');
+                }
+                return `
+                    <div class="form-group"><label>heading</label><input type="text" value="${escape(data.heading || '')}" onchange="updateField('${section}', '${currentLang}', 'heading', this.value)"></div>
+                    <div class="form-group"><label>intro</label><textarea onchange="updateField('${section}', '${currentLang}', 'intro', this.value)">${escape(data.intro || '')}</textarea></div>
+                    <div><label>Job Positions</label>${positionsHtml}</div>
+                    <button class="add-btn" onclick="addCareerPosition()">+ Add Job Position</button>
+                `;
+            }
+
+            return '<p>No editable fields</p>';
+        }
+
+        // ========================
+        // Update Functions
+        // ========================
+        function updateField(section, lang, field, value) {
+            if (!content[lang][section]) content[lang][section] = {};
+            content[lang][section][field] = value;
+            triggerSave();
+        }
+
+        function updateNestedField(section, lang, path, value) {
+            const parts = path.split('.');
+            let obj = content[lang][section];
+            for (let i = 0; i < parts.length - 1; i++) {
+                if (!obj[parts[i]]) obj[parts[i]] = {};
+                obj = obj[parts[i]];
+            }
+            obj[parts[parts.length - 1]] = value;
+            triggerSave();
+        }
+
+        // Services (home)
+        function addServiceItem() {
+            if (!content[currentLang].services.items) content[currentLang].services.items = [];
+            content[currentLang].services.items.push({ name: "New Service", desc: "Description" });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeServiceItem(index) {
+            content[currentLang].services.items.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateServiceItem(index, field, value) {
+            content[currentLang].services.items[index][field] = value;
+            triggerSave();
+        }
+
+        // Our Edge
+        function addEdgeItem() {
+            if (!content[currentLang].ourEdge.items) content[currentLang].ourEdge.items = [];
+            content[currentLang].ourEdge.items.push({ title: "New Edge Point", desc: "Description" });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeEdgeItem(index) {
+            content[currentLang].ourEdge.items.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateEdgeItem(index, field, value) {
+            content[currentLang].ourEdge.items[index][field] = value;
+            triggerSave();
+        }
+
+        // ========================
+        // SERVICES PAGE FUNCTIONS
+        // ========================
+        function addServicePageItem() {
+            if (!content[currentLang].servicesPage.items) content[currentLang].servicesPage.items = [];
+            content[currentLang].servicesPage.items.push({
+                num: (content[currentLang].servicesPage.items.length + 1).toString().padStart(2, '0'),
+                title: "New Service",
+                desc: "Description",
+                list: []
+            });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeServicePageItem(index) {
+            content[currentLang].servicesPage.items.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateServicePageItem(index, field, value) {
+            content[currentLang].servicesPage.items[index][field] = value;
+            triggerSave();
+        }
+
+        function addListItem(parentIdx) {
+            if (!content[currentLang].servicesPage.items[parentIdx].list) {
+                content[currentLang].servicesPage.items[parentIdx].list = [];
+            }
+            content[currentLang].servicesPage.items[parentIdx].list.push("New item");
+            renderForm();
+            triggerSave();
+        }
+
+        function removeListItem(parentIdx, itemIdx) {
+            content[currentLang].servicesPage.items[parentIdx].list.splice(itemIdx, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateListItem(parentIdx, itemIdx, value) {
+            content[currentLang].servicesPage.items[parentIdx].list[itemIdx] = value;
+            triggerSave();
+        }
+
+        function addSubListItem(parentIdx, subKey) {
+            if (!content[currentLang].servicesPage.items[parentIdx][subKey].list) {
+                content[currentLang].servicesPage.items[parentIdx][subKey].list = [];
+            }
+            content[currentLang].servicesPage.items[parentIdx][subKey].list.push("New item");
+            renderForm();
+            triggerSave();
+        }
+
+        function removeSubListItem(parentIdx, subKey, itemIdx) {
+            content[currentLang].servicesPage.items[parentIdx][subKey].list.splice(itemIdx, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateSubListItem(parentIdx, subKey, itemIdx, value) {
+            content[currentLang].servicesPage.items[parentIdx][subKey].list[itemIdx] = value;
+            triggerSave();
+        }
+
+        function updateSubField(parentIdx, subKey, field, value) {
+            content[currentLang].servicesPage.items[parentIdx][subKey][field] = value;
+            triggerSave();
+        }
+
+        // Lifecycle
+        function addLifecycleStep() {
+            if (!content[currentLang].whoWeAre.lifecycle.steps) content[currentLang].whoWeAre.lifecycle.steps = [];
+            content[currentLang].whoWeAre.lifecycle.steps.push({ title: "New Step", desc: "Description" });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeLifecycleStep(index) {
+            content[currentLang].whoWeAre.lifecycle.steps.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateLifecycleStep(index, field, value) {
+            content[currentLang].whoWeAre.lifecycle.steps[index][field] = value;
+            triggerSave();
+        }
+
+        // Principles
+        function addPrinciple() {
+            if (!content[currentLang].whoWeAre.principles.items) content[currentLang].whoWeAre.principles.items = [];
+            content[currentLang].whoWeAre.principles.items.push({ title: "New Principle", desc: "Description" });
+            renderForm();
+            triggerSave();
+        }
+
+        function removePrinciple(index) {
+            content[currentLang].whoWeAre.principles.items.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updatePrinciple(index, field, value) {
+            content[currentLang].whoWeAre.principles.items[index][field] = value;
+            triggerSave();
+        }
+
+        // Industries
+        function addIndustry() {
+            if (!content[currentLang].whoWeAre.industries.list) content[currentLang].whoWeAre.industries.list = [];
+            content[currentLang].whoWeAre.industries.list.push("New industry");
+            renderForm();
+            triggerSave();
+        }
+
+        function removeIndustry(index) {
+            content[currentLang].whoWeAre.industries.list.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateIndustry(index, value) {
+            content[currentLang].whoWeAre.industries.list[index] = value;
+            triggerSave();
+        }
+
+        // Team
+        function addTeamMember() {
+            if (!content[currentLang].team.members) content[currentLang].team.members = [];
+            content[currentLang].team.members.push({ name: "New Member", role: "Role", bio: "Bio" });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeTeamMember(index) {
+            content[currentLang].team.members.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateTeamMember(index, field, value) {
+            content[currentLang].team.members[index][field] = value;
+            triggerSave();
+        }
+
+        // ========================
+        // Navigation
+        // ========================
+        function switchPage(page) {
+            currentPage = page;
+            currentSection = pages[page].sections[0];
+            render();
+        }
+
+        function switchLang(lang) {
+            currentLang = lang;
+            renderForm();
+        }
+
+        function switchSection(section) {
+            currentSection = section;
+            renderForm();
+            renderSectionSelector();
+        }
+
+        function escape(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
+        }
+
+        // ========================
+        // Start - check auth first
+        // ========================
+        checkAuth();
+
+        // Update save status text for local mode
+        if (isLocalhost) {
+            const status = document.getElementById('saveStatus');
+            if (status) {
+                status.innerHTML = '📥 Download JSON';
+                status.style.background = '#007bff';
+            }
+        }
+
+        // ========================
+        // CAREER FUNCTIONS
+        // ========================
+
+        function addCareerPosition() {
+            if (!content[currentLang].careers) content[currentLang].careers = { positions: [] };
+            if (!content[currentLang].careers.positions) content[currentLang].careers.positions = [];
+            content[currentLang].careers.positions.push({
+                id: Date.now().toString(),
+                title: "New Position",
+                location: "Sofia, Bulgaria",
+                type: "Full-time",
+                description: "Job description",
+                requirements: [],
+                niceToHave: []
+            });
+            renderForm();
+            triggerSave();
+        }
+
+        function removeCareerPosition(index) {
+            content[currentLang].careers.positions.splice(index, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateCareerPosition(index, field, value) {
+            content[currentLang].careers.positions[index][field] = value;
+            triggerSave();
+        }
+
+        function addCareerRequirement(posIndex) {
+            if (!content[currentLang].careers.positions[posIndex].requirements) {
+                content[currentLang].careers.positions[posIndex].requirements = [];
+            }
+            content[currentLang].careers.positions[posIndex].requirements.push("New requirement");
+            renderForm();
+            triggerSave();
+        }
+
+        function removeCareerRequirement(posIndex, reqIndex) {
+            content[currentLang].careers.positions[posIndex].requirements.splice(reqIndex, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateCareerRequirement(posIndex, reqIndex, value) {
+            content[currentLang].careers.positions[posIndex].requirements[reqIndex] = value;
+            triggerSave();
+        }
+
+        function addCareerNiceToHave(posIndex) {
+            if (!content[currentLang].careers.positions[posIndex].niceToHave) {
+                content[currentLang].careers.positions[posIndex].niceToHave = [];
+            }
+            content[currentLang].careers.positions[posIndex].niceToHave.push("New nice to have");
+            renderForm();
+            triggerSave();
+        }
+
+        function removeCareerNiceToHave(posIndex, reqIndex) {
+            content[currentLang].careers.positions[posIndex].niceToHave.splice(reqIndex, 1);
+            renderForm();
+            triggerSave();
+        }
+
+        function updateCareerNiceToHave(posIndex, reqIndex, value) {
+            content[currentLang].careers.positions[posIndex].niceToHave[reqIndex] = value;
+            triggerSave();
+        }
+
+        // Global functions
+        window.switchPage = switchPage;
+        window.switchLang = switchLang;
+        window.switchSection = switchSection;
+        window.updateField = updateField;
+        window.updateNestedField = updateNestedField;
+        window.addServiceItem = addServiceItem;
+        window.removeServiceItem = removeServiceItem;
+        window.updateServiceItem = updateServiceItem;
+        window.addEdgeItem = addEdgeItem;
+        window.removeEdgeItem = removeEdgeItem;
+        window.updateEdgeItem = updateEdgeItem;
+        window.addServicePageItem = addServicePageItem;
+        window.removeServicePageItem = removeServicePageItem;
+        window.updateServicePageItem = updateServicePageItem;
+        window.addListItem = addListItem;
+        window.removeListItem = removeListItem;
+        window.updateListItem = updateListItem;
+        window.addSubListItem = addSubListItem;
+        window.removeSubListItem = removeSubListItem;
+        window.updateSubListItem = updateSubListItem;
+        window.updateSubField = updateSubField;
+        window.addLifecycleStep = addLifecycleStep;
+        window.removeLifecycleStep = removeLifecycleStep;
+        window.updateLifecycleStep = updateLifecycleStep;
+        window.addPrinciple = addPrinciple;
+        window.removePrinciple = removePrinciple;
+        window.updatePrinciple = updatePrinciple;
+        window.addIndustry = addIndustry;
+        window.removeIndustry = removeIndustry;
+        window.updateIndustry = updateIndustry;
+        window.addTeamMember = addTeamMember;
+        window.removeTeamMember = removeTeamMember;
+        window.updateTeamMember = updateTeamMember;
+        window.downloadJSON = downloadJSON;
+        window.login = login;
+        window.logout = logout;
+        window.addCareerPosition = addCareerPosition;
+        window.removeCareerPosition = removeCareerPosition;
+        window.updateCareerPosition = updateCareerPosition;
+        window.addCareerRequirement = addCareerRequirement;
+        window.removeCareerRequirement = removeCareerRequirement;
+        window.updateCareerRequirement = updateCareerRequirement;
+        window.addCareerNiceToHave = addCareerNiceToHave;
+        window.removeCareerNiceToHave = removeCareerNiceToHave;
+        window.updateCareerNiceToHave = updateCareerNiceToHave;
+    </script>
+</body>
+</html>

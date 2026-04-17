@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "titleLine1": "Complex infrastructure.",
+    "titleLine2": "Engineered right.",
+    "subtitle": "Architecture-driven infrastructure, cloud, and network solutions for mission-critical enterprise environments.",
+    "subtitleSmall": "We design, build, and operate resilient IT ecosystems aligned with business strategy, regulatory requirements, and long-term scalability.",
+    "ctaLabel": "Talk to us",
+    "ctaHref": "/contact"
+  },
+  "whatWeDo": {
+    "heading": "What We Do",
+    "text": "We deliver end-to-end enterprise infrastructure solutions from architecture and implementation to continuous operations and compliance alignment.",
+    "image": "/images/about-photo.svg",
+    "imageAlt": "ITRB infrastructure team"
+  },
+  "servicesOverview": {
+    "heading": "Services",
+    "ctaLabel": "View all services",
+    "ctaHref": "/services",
+    "items": [
+      {
+        "title": "Architecture & Infrastructure Consulting",
+        "description": "Structured assessment, architecture design, and technology roadmaps for complex enterprise environments."
+      },
+      {
+        "title": "Virtualization & Data Center",
+        "description": "High-availability on-premise and private cloud infrastructures built on modern virtualization and resilient storage."
+      },
+      {
+        "title": "Cloud & Hybrid Infrastructure",
+        "description": "Secure hybrid and multi-cloud architectures connecting data centers, edge infrastructure, and public cloud environments."
+      },
+      {
+        "title": "Network Architecture & Connectivity",
+        "description": "Secure, segmented, and high-performance connectivity across sites, regions, and cloud environments."
+      }
+    ]
+  },
+  "ourEdge": {
+    "heading": "Our Edge",
+    "items": [
+      {
+        "title": "Architecture-first",
+        "description": "Solutions designed around requirements and constraints, not predefined technology stacks."
+      },
+      {
+        "title": "Enterprise-grade reliability",
+        "description": "We build infrastructures for high-availability, mission-critical operations, and long-term resilience."
+      },
+      {
+        "title": "Hybrid specialization",
+        "description": "Seamless integration of on-premise, data center, and cloud environments into unified ecosystems."
+      },
+      {
+        "title": "Lifecycle ownership",
+        "description": "Full lifecycle delivery: assessment, architecture, implementation, operations, and optimization."
+      }
+    ]
+  },
+  "ourApproach": {
+    "heading": "Our Approach",
+    "paragraphs": [
+      "We apply an architecture-driven lifecycle model ensuring alignment between business objectives, technical design, and long-term operations.",
+      "We partner with organizations operating complex digital ecosystems that demand reliability, security, and regulatory compliance."
+    ],
+    "image": "/images/service-3.svg",
+    "imageAlt": "Our approach",
+    "ctaLabel": "Learn more",
+    "ctaHref": "/who-we-are"
+  },
+  "contactCta": {
+    "heading": "Contact us",
+    "text": "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
+    "ctaLabel": "Request consultation",
+    "ctaHref": "/contact"
+  }
+}

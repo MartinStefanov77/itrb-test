@@ -1,0 +1,20 @@
+.header {
+  :global(.nav-links) {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuOpen {
+    :global(.nav-links) {
+      z-index: 1200;
+      background: #0b1220;
+    }
+
+    :global(.nav-links a) {
+      color: #fff;
+      opacity: 1;
+      text-shadow: none;
+    }
+  }
+}

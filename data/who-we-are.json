@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "title": "Who We Are",
+    "intro1": "ITRB is a technology partner focused exclusively on enterprise IT infrastructure, hybrid architecture, and mission-critical environments. We design, build, and operate secure, reliable, and compliant technology ecosystems aligned with long-term business strategy.",
+    "intro2": "Combining the architectural depth of a global integrator with the focus of a specialized engineering team, ITRB delivers hybrid, data center, and cloud environments for organizations that require reliability, compliance, and lifecycle ownership."
+  },
+  "approach": {
+    "heading": "Approach & Positioning",
+    "description": "ITRB does not offer one-size-fits-all IT services. Every solution follows an architecture-driven lifecycle model based on structured analysis, business understanding, and long-term sustainability. Our work focuses on complex, regulated, and mission-critical environments, where infrastructure must be reliable, scalable, and aligned with regulatory and operational requirements.",
+    "image": "/images/infrastucture.svg",
+    "imageAlt": "Approach and positioning"
+  },
+  "lifecycle": {
+    "heading": "Delivery Lifecycle",
+    "intro": "Our structured process guarantees that solutions are thoughtfully designed, implemented, and maintained across their entire lifecycle.",
+    "steps": [
+      { "title": "Discovery & Analysis", "description": "In-depth assessment of business requirements, regulatory frameworks, operational dependencies, and risk factors." },
+      { "title": "Architectural Design", "description": "Development of high-level and detailed architectures aligned with business priorities and compliance requirements." },
+      { "title": "Implementation", "description": "Deployment of hybrid, cloud, and on-premise infrastructures with resilient, high-performance systems." },
+      { "title": "Testing & Acceptance", "description": "Validation of performance, security, and compliance before operational handover." },
+      { "title": "Documentation & Training", "description": "Comprehensive guides and training ensure client teams are fully equipped to operate and maintain systems." },
+      { "title": "Continuous Support & Optimization", "description": "Ongoing monitoring, maintenance, and optimization to ensure long-term reliability and efficiency." }
+    ]
+  },
+  "principles": {
+    "heading": "Key Principles",
+    "items": [
+      { "title": "Architecture before technology", "description": "Solutions start with requirements and business alignment, not predefined stacks." },
+      { "title": "Business alignment", "description": "Every design decision supports organizational objectives and operational priorities." },
+      { "title": "Regulatory awareness", "description": "Compliance, data locality, and security are embedded from day one." },
+      { "title": "Resilience by design", "description": "Systems are built for high availability, redundancy, and continuity." },
+      { "title": "Lifecycle ownership", "description": "Full coverage from assessment through architecture, implementation, operations, and optimization." }
+    ]
+  },
+  "industries": {
+    "heading": "Industries We Support",
+    "intro": "We help organizations imagine, build, and secure their digital future, supporting businesses operating complex, regulated, or mission-critical environments.",
+    "items": ["Financial services", "Fintech", "Telecommunications", "SaaS and technology platforms", "Enterprise and corporate IT"]
+  },
+  "certificates": {
+    "heading": "ISO certifications",
+    "intro": "Our management systems are certified against internationally recognized standards, reflecting our commitment to quality, information security, service management, and ethical conduct.",
+    "items": [
+      "ISO 9001 — Quality management",
+      "ISO/IEC 27001 — Information security",
+      "ISO/IEC 20000-1 — IT service management",
+      "ISO 37001 — Anti-bribery management"
+    ]
+  },
+  "team": {
+    "heading": "The People Behind ITRB",
+    "intro": "A diverse team of experts united by a passion for technology and a commitment to excellence.",
+    "members": [
+      { "name": "Asen Tsonev", "role": "Head of PMO", "bio": "Leads complex cross-border projects with a focus on disciplined delivery and measurable outcomes.", "image": "/images/team/Asen%20Tsonev.webp" },
+      { "name": "Ekaterina Delcheva", "role": "Chief Financial Officer", "bio": "Ensures financial precision, process control, and stable operations across business units.", "image": "/images/team/Ekaterina%20Delcheva.webp" },
+      { "name": "Elena Petrova", "role": "Senior Recruitment Specialist", "bio": "Builds high-impact teams by aligning recruitment strategy with long-term organizational goals.", "image": "/images/team/Elena%20Petrova.webp" },
+      { "name": "Momchil Pakyov", "role": "Head of UX/UI Design", "bio": "Combines strategic product thinking and visual execution to shape user-centered experiences.", "image": "/images/team/Momchil%20Pakyov.webp" },
+      { "name": "Vladimir Nikolov", "role": "Head of HR", "bio": "Drives people operations, culture, and organizational development aligned with business strategy.", "image": "/images/team/Vladimir%20Nikolov.webp" },
+      { "name": "Zdravko Zdravkov", "role": "IT & Telecommunications Specialist", "bio": "Designs and maintains resilient, scalable IT infrastructures for critical operations.", "image": "/images/team/Zdravko_Zdravkov.webp" },
+      { "name": "Emre Sakal", "role": "Head of Technical Support", "bio": "Leads support teams through structured operations, KPI tracking, and quality-focused delivery.", "image": "/images/team/Emre%20Sakal.webp" }
+    ]
+  }
+}

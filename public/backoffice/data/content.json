@@ -1,0 +1,1190 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "whoWeAre": "Who we are",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title1": "Complex infrastructure.",
+      "title2": "Engineered right.",
+      "subtitle": "Architecture-driven infrastructure, cloud, and network solutions for mission-critical enterprise environments.",
+      "subtitle2": "We design, build, and operate resilient IT ecosystems aligned with business strategy, regulatory requirements, and long-term scalability.",
+      "cta": "Talk to us"
+    },
+    "whatWeDo": {
+      "tag": "What We Do",
+      "heading": "What We Do",
+      "p1": "We deliver end-to-end enterprise infrastructure solutions – from architecture and implementation to continuous operations and compliance alignment - Personal Data Protection, Information Security, Critical Infrastructure and Cybersecurity, Financial and Regulatory Requirements, Compliance with Industry Standards, Local Legal Requirements.",
+      "p2": "Specializing in hybrid environments, data center and cloud architecture, secure networking, and business-critical continuity systems, we provide solutions tailored for global organizations."
+    },
+    "services": {
+      "tag": "Services",
+      "heading": "Services",
+      "items": [
+        {
+          "name": "Architecture & Infrastructure Consulting",
+          "desc": "Structured assessment, architecture design, and technology roadmaps for complex enterprise environments."
+        },
+        {
+          "name": "Virtualization & Data Center",
+          "desc": "High-availability on-premise and private cloud infrastructures built on modern virtualization, resilient storage, and scalable compute platforms."
+        },
+        {
+          "name": "Cloud & Hybrid Infrastructure",
+          "desc": "Secure hybrid and multi-cloud architectures connecting data centers, edge infrastructure, and public cloud environments."
+        },
+        {
+          "name": "Network Architecture & Connectivity",
+          "desc": "Secure, segmented, and high-performance connectivity across sites, regions, and cloud environments."
+        },
+        {
+          "name": "Backup & Business Continuity",
+          "desc": "Immutable backups, disaster recovery, and resilience strategies ensuring operational continuity."
+        },
+        {
+          "name": "Security & Compliance",
+          "desc": "Infrastructure hardening, access control, monitoring, and regulatory-aligned security architecture."
+        },
+        {
+          "name": "Managed Infrastructure & Operations",
+          "desc": "24/7 monitoring, incident response, and lifecycle management for enterprise infrastructure environments."
+        },
+        {
+          "name": "Development & Product Engineering",
+          "desc": "Custom enterprise software, system integrations, and automation solutions."
+        }
+      ],
+      "cta": "View all services"
+    },
+    "ourEdge": {
+      "tag": "Our Edge",
+      "heading": "Our Edge",
+      "items": [
+        {
+          "title": "Architecture-first",
+          "desc": "Solutions designed around requirements and constraints – not predefined technology stacks."
+        },
+        {
+          "title": "Enterprise-grade reliability",
+          "desc": "We build infrastructures for high-availability, mission-critical operations, and long-term operational resilience."
+        },
+        {
+          "title": "Hybrid specialization",
+          "desc": "Seamless integration of on-premise, data center, and cloud environments into unified, high-performance ecosystems."
+        },
+        {
+          "title": "Regulatory alignment",
+          "desc": "Infrastructure designed to meet compliance, data locality, and security requirements."
+        },
+        {
+          "title": "Lifecycle ownership",
+          "desc": "Full infrastructure lifecycle: assessment → architecture → build → operations → compliance."
+        },
+        {
+          "title": "Engineering-led delivery",
+          "desc": "Direct access to architects and engineers supported by account managers for smooth coordination."
+        }
+      ]
+    },
+    "approach": {
+      "tag": "Our Approach",
+      "heading": "Our Approach",
+      "intro": "We apply an architecture-driven lifecycle model ensuring alignment between business objectives, technical design, and long-term operations.",
+      "lifecycleLabel": "Delivery Lifecycle:",
+      "steps": "Discovery & Analysis → Architecture → Implementation → Validation → Operations → Optimization",
+      "para": "We partner with businesses operating complex digital ecosystems that demand reliability, security, and regulatory compliance.",
+      "envs": "Typical environments include financial services, fintech, telecommunications, SaaS and technology platforms, global corporate IT ecosystems.",
+      "cta": "Learn more"
+    },
+    "contactCta": {
+      "heading": "Contact us",
+      "desc": "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
+      "cta": "Request consultation"
+    },
+    "whoWeAre": {
+      "tag": "Who We Are",
+      "heading": "Who We Are",
+      "intro1": "ITRB is a technology partner focused exclusively on enterprise IT infrastructure, hybrid architecture, and mission-critical environments. We design, build, and operate secure, reliable, and compliant technology ecosystems aligned with long-term business strategy.",
+      "intro2": "Combining the architectural depth of a global integrator with the focus of a specialized engineering team, ITRB delivers hybrid, data center, and cloud environments for organizations that require reliability, compliance, and lifecycle ownership.",
+      "approach": {
+        "heading": "Approach & Positioning",
+        "desc": "ITRB does not offer one-size-fits-all IT services. Every solution follows an architecture-driven lifecycle model based on structured analysis, business understanding, and long-term sustainability. Our work focuses on complex, regulated, and mission-critical environments, where infrastructure must be reliable, scalable, and aligned with regulatory and operational requirements."
+      },
+      "lifecycle": {
+        "heading": "Delivery Lifecycle",
+        "intro": "Our structured process guarantees that solutions are thoughtfully designed, implemented, and maintained across their entire lifecycle.",
+        "steps": [
+          {
+            "title": "Discovery & Analysis",
+            "desc": "In-depth assessment of business requirements, regulatory frameworks, operational dependencies, and risk factors."
+          },
+          {
+            "title": "Architectural Design",
+            "desc": "Development of high-level and detailed architectures aligned with business priorities and compliance requirements."
+          },
+          {
+            "title": "Implementation",
+            "desc": "Deployment of hybrid, cloud, and on-premise infrastructures with resilient, high-performance systems."
+          },
+          {
+            "title": "Testing & Acceptance",
+            "desc": "Validation of performance, security, and compliance before operational handover."
+          },
+          {
+            "title": "Documentation & Training",
+            "desc": "Comprehensive guides and training ensure client teams are fully equipped to operate and maintain systems."
+          },
+          {
+            "title": "Continuous Support & Optimization",
+            "desc": "Ongoing monitoring, maintenance, and optimization to ensure long-term reliability and efficiency."
+          }
+        ]
+      },
+      "principles": {
+        "heading": "Key Principles",
+        "items": [
+          {
+            "title": "Architecture before technology",
+            "desc": "Solutions start with requirements and business alignment, not predefined stacks."
+          },
+          {
+            "title": "Business alignment",
+            "desc": "Every design decision supports organizational objectives and operational priorities."
+          },
+          {
+            "title": "Regulatory awareness",
+            "desc": "Compliance, data locality, and security are embedded from day one."
+          },
+          {
+            "title": "Resilience by design",
+            "desc": "Systems are built for high availability, redundancy, and continuity."
+          },
+          {
+            "title": "Lifecycle ownership",
+            "desc": "Full coverage from assessment through architecture, implementation, operations, and optimization."
+          }
+        ]
+      },
+      "industries": {
+        "heading": "Industries We Support",
+        "intro": "We help organizations imagine, build, and secure their digital future, supporting businesses operating complex, regulated, or mission-critical environments.",
+        "list": [
+          "Financial services",
+          "Fintech",
+          "Telecommunications",
+          "SaaS & technology platforms",
+          "Global IT corporations"
+        ]
+      }
+    },
+    "servicesPage": {
+      "tag": "Services",
+      "heading": "Services",
+      "intro": "We guide enterprises through the complete technology lifecycle, from design and cloud transformation to secure networking and managed operations.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Consulting & Advisory",
+          "desc": "Every client project begins with a structured architectural assessment, ensuring technology decisions are aligned with business goals, operational realities, and regulatory requirements. Our expert analysts craft tailored solutions that consider business processes, service criticality, regulatory obligations, budget parameters, and future growth.",
+          "list": [
+            "Infrastructure & architecture assessment",
+            "Analysis of business requirements, regulatory framework, and operational dependencies",
+            "Risk & impact analysis",
+            "Capacity planning & scalability modeling",
+            "Cost optimization models (CapEx / OpEx)",
+            "Development of high-level and low-level architectures",
+            "Technology roadmapping"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Virtualization & Data Center",
+          "desc": "We design and deploy resilient on-premise and private cloud environments built for high availability, performance, and scalability.",
+          "list": [
+            "Enterprise virtualization platforms (VMware, Hyper-V, Proxmox)",
+            "Consolidated high-availability clusters",
+            "Software-defined infrastructures",
+            "SAN / NAS / Distributed Storage solutions",
+            "Private cloud environments",
+            "Migration and modernization of legacy infrastructures"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Cloud & Hybrid Infrastructure",
+          "desc": "We architect and integrate secure cloud and hybrid environments, connecting data centers, cloud platforms, and distributed systems. Our solutions cover the full cloud spectrum – from local and edge environments to public cloud platforms – combining the flexibility of cloud with the reliability of on-premise infrastructure.",
+          "sub1": {
+            "title": "Cloud Engineering",
+            "list": [
+              "Public cloud architecture design",
+              "Cloud migration strategies",
+              "Multi-cloud integrations",
+              "Infrastructure as Code (IaC) implementation",
+              "Cloud governance and cost-control frameworks"
+            ]
+          },
+          "sub2": {
+            "title": "Hybrid Architecture",
+            "list": [
+              "Secure connectivity between on-premise and cloud environments",
+              "Replication and synchronization mechanisms",
+              "Geographic redundancy (geo-redundancy)",
+              "Disaster Recovery environments",
+              "Data locality and compliance frameworks"
+            ]
+          }
+        },
+        {
+          "num": "04",
+          "title": "Network Architecture & Connectivity",
+          "desc": "Our network specialists design enterprise-grade connectivity solutions that enable secure, high-performance communication across distributed infrastructure environments.",
+          "sub1": {
+            "title": "Core capabilities",
+            "list": [
+              "Layer 2 and Layer 3 network architecture",
+              "Core / Distribution / Access network design",
+              "SD-WAN deployment",
+              "Secure VPN and encrypted tunnels",
+              "International connectivity and transit routing",
+              "Data Center Interconnect (DCI)",
+              "MPLS integrations"
+            ]
+          },
+          "sub2": {
+            "title": "Advanced network services for complex environments",
+            "list": [
+              "Traffic optimization for latency-sensitive applications",
+              "Geo-restriction and controlled access policies",
+              "Geo-IP filtering",
+              "Cross-border data transfer control",
+              "Network segmentation and micro-segmentation"
+            ]
+          }
+        },
+        {
+          "num": "05",
+          "title": "Backup & Business Continuity",
+          "desc": "For mission-critical information, we design resilient data protection and recovery strategies that minimize downtime and ensure continuous operations in the event of disruption.",
+          "list": [
+            "Multi-layer backup strategies",
+            "Immutable backup solutions",
+            "Offsite and cloud replication",
+            "Disaster Recovery architecture and testing",
+            "RPO and RTO definition",
+            "Backup encryption and ransomware protection",
+            "Periodic disaster recovery simulations"
+          ]
+        },
+        {
+          "num": "06",
+          "title": "Security & Compliance",
+          "desc": "We implement infrastructure security frameworks designed to protect enterprise systems and support regulatory compliance.",
+          "list": [
+            "Identity and Access Management (IAM)",
+            "Multi-Factor Authentication (MFA)",
+            "Infrastructure hardening",
+            "Vulnerability assessments",
+            "Network segmentation and zero-trust architecture",
+            "Logging and monitoring frameworks",
+            "Regulatory audit readiness"
+          ]
+        },
+        {
+          "num": "07",
+          "title": "Managed Infrastructure & Operations",
+          "desc": "We provide 24/7 enterprise infrastructure support and lifecycle management. All services are delivered under structured SLA frameworks with clearly defined response levels.",
+          "list": [
+            "24/7 technical support and monitoring",
+            "Incident and problem management",
+            "On-call engineering teams",
+            "Critical incident response",
+            "Patch and lifecycle management",
+            "Infrastructure performance optimization"
+          ]
+        },
+        {
+          "num": "08",
+          "title": "Development & Product Engineering",
+          "desc": "In addition to infrastructure services, we develop enterprise-grade software and integration solutions that enhance operational efficiency and automation.",
+          "list": [
+            "Custom enterprise software development",
+            "Backend systems and platform integration",
+            "API integrations",
+            "UI/UX design",
+            "Internal systems and automation solutions"
+          ]
+        },
+        {
+          "num": "09",
+          "title": "Project & Business Management",
+          "desc": "Our project and account management teams ensure structured delivery and long-term client engagement.",
+          "sub1": {
+            "title": "Project Management",
+            "list": [
+              "Management of infrastructure and transformation projects",
+              "Control of timelines, budget, and risk",
+              "Vendor coordination",
+              "Acceptance procedures"
+            ]
+          },
+          "sub2": {
+            "title": "Account Management",
+            "list": [
+              "Strategic client management",
+              "Long-term technology planning",
+              "Regular review sessions",
+              "Environment optimization"
+            ]
+          }
+        },
+        {
+          "num": "10",
+          "title": "Legal & Regulatory Advisory",
+          "desc": "Our legal advisory team provides support in areas related to technology governance and regulatory compliance.",
+          "list": [
+            "IT contract advisory",
+            "Data protection and GDPR compliance",
+            "Preparation for ISO certifications (ISO 9001, ISO 20000-1, ISO 27001, ISO 37001)",
+            "Assistance with EU regulatory requirements",
+            "Software licensing compliance",
+            "Vendor contract structuring and governance"
+          ]
+        }
+      ]
+    },
+    "certificates": {
+      "heading": "ISO certifications",
+      "intro": "Our management systems are certified against internationally recognized standards, reflecting our commitment to quality, information security, service management, and ethical conduct.",
+      "a11yClose": "Close",
+      "a11yPrev": "Previous",
+      "a11yNext": "Next",
+      "thumbsGroup": "All certificates",
+      "items": [
+        {
+          "title": "ISO 9001 - Quality management systems",
+          "enImage": "images/certificates/2989-itrb-certificate-9001-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-9001-bg.jpg"
+        },
+        {
+          "title": "ISO/IEC 27001 — Information security management",
+          "enImage": "images/certificates/2989-itrb-certificate-27001-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-27001-bg.jpg"
+        },
+        {
+          "title": "ISO/IEC 20000-1 — IT service management",
+          "enImage": "images/certificates/2989-itrb-certificate-20000-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-20000-bg.jpg"
+        },
+        {
+          "title": "ISO 37001 — Anti-bribery management systems",
+          "enImage": "images/certificates/3019-itrb-certificate-37001-en.jpg",
+          "bgImage": "images/certificates/3019-itrb-certificate-37001-bg.jpg"
+        }
+      ]
+    },
+    "team": {
+      "tag": "Our Team",
+      "heading": "The People Behind ITRB",
+      "sub": "A diverse team of experts united by a passion for technology and a commitment to excellence.",
+      "viewProfile": "View Profile",
+      "members": [
+        {
+          "name": "Asen Tsonev",
+          "role": "Head of PMO",
+          "bio": "Head of PMO with over 15 years of experience leading complex, cross-border projects. Recognized by PMI with the \"PMO of the Year\" award, he specializes in translating strategic vision into disciplined execution and measurable results for growing organizations."
+        },
+        {
+          "name": "Ekaterina Delcheva",
+          "role": "Chief Financial Officer",
+          "bio": "Senior accounting professional with 36 years of international experience across diverse industries. With deep expertise in ERP systems, including SAP, she ensures financial precision, operational stability, and disciplined process management in complex environments."
+        },
+        {
+          "name": "Elena Petrova",
+          "role": "Senior Recruitment Specialist",
+          "bio": "Senior Recruitment Specialist with over 10 years of experience in technical and executive hiring across Europe. She leads talent acquisition with strategic focus, securing high-impact professionals who strengthen organizational capability and long-term growth."
+        },
+        {
+          "name": "Momchil Pakyov",
+          "role": "Head of UX/UI Design",
+          "bio": "UX and Graphic Designer with over a decade of experience in branding, digital products, and design systems. He combines strategic product thinking with refined visual execution, creating user-centered experiences that strengthen brand identity and drive business impact."
+        },
+        {
+          "name": "Vladimir Nikolov",
+          "role": "Head of HR",
+          "bio": "Head of HR with 13+ years of experience in organizational development, talent strategy, and operational structuring. He builds high-performing cultures aligned with business objectives, driving sustainable growth through disciplined people leadership."
+        },
+        {
+          "name": "Vladislav Yordanov",
+          "role": "Head of Technical & Customer Support",
+          "bio": "Technical and Customer Support leader with 15 years of experience across SaaS, and financial services. He has led international teams and supported complex product launches, combining operational rigor with strong communication expertise."
+        },
+        {
+          "name": "Zdravko Zdravkov",
+          "role": "IT & Telecommunications Specialist",
+          "bio": "IT and telecommunications professional with over 20 years experience in UNIX systems, virtualization, and cybersecurity. Formerly an IT Manager at a top Bulgarian construction firm, he now leads the design and maintenance of resilient, scalable IT infrastructures at ITRB, enhancing operational efficiency, reliability, and strategic innovation for clients and teams alike."
+        },
+        {
+          "name": "Emre Sakal",
+          "role": "Head of Technical Support",
+          "bio": "With over five years of experience in operations and team management, I serve as Head of Technical Support at ITRB. I specialize in team leadership, performance management, and process optimization, overseeing recruitment, training, coaching, and KPI tracking to ensure efficient workflows, high service quality, strong team performance, and continuous employee development."
+        }
+      ]
+    },
+    "contact": {
+      "tag": "Get in Touch",
+      "heading": "Let's Work Together",
+      "desc": "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
+      "address": "42 Vitosha Blvd., 1000 Sofia, Bulgaria",
+      "email": "info@itrb.org",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message",
+        "captcha": "Anti-spam check:",
+        "agree": "I agree to the processing of my personal data in accordance with the <a href=\"privacy-policy.html\" target=\"_blank\">Privacy Policy</a>."
+      },
+      "success": "✓ Thank you! We'll be in touch shortly.",
+      "error": "✕ Something went wrong. Please try again or email us directly.",
+      "fieldRequired": "This field is required.",
+      "emailInvalid": "Please enter a valid email address."
+    },
+    "careers": {
+      "hero": {
+        "title": "Careers",
+        "intro": "We provide opportunities for professionals at different stages of their journey – from ambitious juniors eager to learn to experienced experts looking to solve complex challenges. Here you can find our current open positions."
+      },
+      "filter": {
+        "all": "All",
+        "city": "City",
+        "department": "Department",
+        "search": "Search",
+        "searchPlaceholder": "Search by job title…",
+        "clearCity": "Clear city filter",
+        "clearDepartment": "Clear department filter",
+        "clearSearch": "Clear search",
+        "city": {
+          "sofia": "Sofia"
+        },
+        "dept": {
+          "administration": "Administration",
+          "finance": "Finance",
+          "humanResources": "Human Resources",
+          "engineering": "Engineering",
+          "architecture": "Architecture"
+        }
+      },
+      "listEmpty": "No positions match your filters.",
+      "listEmptyNoJobs": "<h2>We don't have any open positions at the moment.</h2><br><p>We update this list regularly — please check back soon. If you need to reach us for anything else, you'll find our contact details on the Contact page.</p>",
+      "location": "Location:",
+      "type": "Type:",
+      "card": {
+        "apply": "View Details →"
+      },
+      "positions": [
+        {
+          "id": "1",
+          "title": "Senior DevOps Engineer",
+          "location": "Sofia, Bulgaria / Remote",
+          "type": "Full-time",
+          "description": "We are looking for an experienced DevOps Engineer to help us build and maintain our cloud infrastructure. You will work with cutting-edge technologies and be part of a collaborative team.",
+          "department": "Engineering",
+          "city": "sofia",
+          "requirements": [
+            "5+ years of experience in DevOps or SRE roles",
+            "Strong experience with AWS, Azure, or GCP",
+            "Proficiency in Terraform, Kubernetes, and CI/CD pipelines",
+            "Experience with monitoring tools like Prometheus, Grafana",
+            "Excellent communication and problem-solving skills"
+          ],
+          "niceToHave": [
+            "Experience with GitOps (ArgoCD, Flux)",
+            "Knowledge of security best practices",
+            "Contributions to open source projects"
+          ]
+        },
+        {
+          "id": "2",
+          "title": "Cloud Architect",
+          "location": "Sofia, Bulgaria / Hybrid",
+          "type": "Full-time",
+          "description": "Join our architecture team to design and implement cloud solutions for enterprise clients. You'll work on complex projects and guide technical decisions.",
+          "department": "Architecture",
+          "city": "sofia",
+          "requirements": [
+            "7+ years of experience in IT infrastructure",
+            "Deep understanding of cloud architectures (AWS, Azure, GCP)",
+            "Experience with hybrid cloud solutions",
+            "Strong knowledge of networking and security",
+            "Excellent documentation and communication skills"
+          ],
+          "niceToHave": [
+            "Relevant certifications (AWS Solutions Architect, Azure Solutions Architect)",
+            "Experience with VMware and on-premise infrastructure",
+            "Previous consulting experience"
+          ]
+        },
+        {
+          "id": "3",
+          "title": "HR Associate",
+          "location": "Sofia, Bulgaria",
+          "type": "Full-time",
+          "description": "We are looking for an HR Associate to support our growing team. You'll handle recruitment, onboarding, and employee relations.",
+          "department": "Human Resources",
+          "city": "sofia",
+          "requirements": [
+            "1-2 years of experience in HR or recruitment",
+            "Excellent communication and organizational skills",
+            "Knowledge of labor law basics",
+            "Proficiency in English and Bulgarian"
+          ],
+          "niceToHave": [
+            "Experience with HRIS systems",
+            "Background in IT/tech companies"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "Office Receptionist",
+          "location": "Sofia, Bulgaria",
+          "type": "Full-time",
+          "description": "We are seeking a friendly and organized Office Receptionist to be the first point of contact for visitors and handle administrative tasks.",
+          "department": "Administration",
+          "city": "sofia",
+          "requirements": [
+            "Excellent communication and interpersonal skills",
+            "Professional appearance and positive attitude",
+            "Proficiency in MS Office",
+            "Fluent in English and Bulgarian"
+          ],
+          "niceToHave": [
+            "Previous experience in a similar role",
+            "Knowledge of office management procedures"
+          ]
+        },
+        {
+          "id": "5",
+          "title": "Accountant",
+          "location": "Sofia, Bulgaria",
+          "type": "Full-time",
+          "description": "Join our finance team as an Accountant. You'll manage financial records, prepare reports, and ensure compliance.",
+          "department": "Finance",
+          "city": "sofia",
+          "requirements": [
+            "Bachelor's degree in Accounting or Finance",
+            "3+ years of accounting experience",
+            "Knowledge of accounting software",
+            "Strong attention to detail"
+          ],
+          "niceToHave": [
+            "Experience with SAP or similar ERP systems",
+            "CPA or ACCA certification"
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "copy": "© 2026 ITRB. All rights reserved.",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "bg": {
+    "nav": {
+      "home": "Начало",
+      "about": "За нас",
+      "services": "Услуги",
+      "whoWeAre": "Кои сме ние",
+      "careers": "Кариери",
+      "contact": "Контакти"
+    },
+    "hero": {
+      "title1": "Сложна инфраструктура.",
+      "title2": "Проектирана правилно.",
+      "subtitle": "Архитектурно насочени инфраструктурни, облачни и мрежови решения за мисионно-критични корпоративни среди.",
+      "subtitle2": "Ние проектираме, изграждаме и управляваме устойчиви IT екосистеми в съответствие с бизнес стратегията, регулаторните изисквания и дългосрочната мащабируемост.",
+      "cta": "Свържете се с нас"
+    },
+    "whatWeDo": {
+      "tag": "Какво правим",
+      "heading": "Какво правим",
+      "p1": "Предоставяме цялостни решения за корпоративна инфраструктура – от архитектура и внедряване до непрекъсната експлоатация и съответствие с нормативните изисквания - Защита на личните данни, Информационна сигурност, Критична инфраструктура и киберсигурност, Финансови и регулаторни изисквания, Съответствие с индустриалните стандарти, Местни законови изисквания.",
+      "p2": "Специализирани в хибридни среди, архитектура на центрове за данни и облак, сигурно мрежово свързване и бизнес-критични системи за непрекъсваемост, ние предлагаме решения, съобразени с глобалните организации."
+    },
+    "services": {
+      "tag": "Услуги",
+      "heading": "Услуги",
+      "items": [
+        {
+          "name": "Архитектурен и инфраструктурен консалтинг",
+          "desc": "Структурирана оценка, архитектурен дизайн и технологични пътни карти за сложни корпоративни среди."
+        },
+        {
+          "name": "Виртуализация и центрове за данни",
+          "desc": "Високодостъпни on-premise и частни облачни инфраструктури, изградени върху модерна виртуализация, устойчиво съхранение и мащабируеми изчислителни платформи."
+        },
+        {
+          "name": "Cloud и хибридни инфраструктури",
+          "desc": "Сигурни хибридни и мулти-облачни архитектури, свързващи центрове за данни, периферна инфраструктура и публични облачни среди."
+        },
+        {
+          "name": "Мрежови архитектури и свързаност",
+          "desc": "Сигурна, сегментирана и високопроизводителна свързаност между обекти, региони и облачни среди."
+        },
+        {
+          "name": "Архив и възстановяване на данни",
+          "desc": "Непроменими резервни копия, възстановяване при бедствие и стратегии за устойчивост, осигуряващи оперативна непрекъснатост."
+        },
+        {
+          "name": "Сигурност и регулаторно съответствие",
+          "desc": "Укрепване на инфраструктурата, контрол на достъпа, мониторинг и архитектура на сигурността в съответствие с регулаторните изисквания."
+        },
+        {
+          "name": "Експертна поддръжка",
+          "desc": "24/7 мониторинг, реагиране при инциденти и управление на жизнения цикъл на корпоративни инфраструктурни среди."
+        },
+        {
+          "name": "Продуктово инженерство",
+          "desc": "Персонализиран корпоративен софтуер, системни интеграции и решения за автоматизация."
+        }
+      ],
+      "cta": "Вижте всички услуги"
+    },
+    "ourEdge": {
+      "tag": "Нашето предимство",
+      "heading": "Нашето предимство",
+      "items": [
+        {
+          "title": "Архитектурно насочени",
+          "desc": "Решения, проектирани около изисквания и ограничения – не предварително дефинирани технологични стекове."
+        },
+        {
+          "title": "Корпоративна надеждност",
+          "desc": "Изграждаме инфраструктури за висока достъпност, мисионно-критични операции и дългосрочна оперативна устойчивост."
+        },
+        {
+          "title": "Хибридна специализация",
+          "desc": "Безпроблемна интеграция на on-premise, центрове за данни и облачни среди в единни високопроизводителни екосистеми."
+        },
+        {
+          "title": "Регулаторно съответствие",
+          "desc": "Инфраструктура, проектирана да отговаря на изискванията за съответствие, локализация на данните и сигурност."
+        },
+        {
+          "title": "Пълен жизнен цикъл",
+          "desc": "Пълен жизнен цикъл на инфраструктурата: оценка → архитектура → изграждане → експлоатация → съответствие."
+        },
+        {
+          "title": "Инженеринг водено изпълнение",
+          "desc": "Директен достъп до архитекти и инженери, подкрепени от мениджъри за гладка координация."
+        }
+      ]
+    },
+    "approach": {
+      "tag": "Нашият подход",
+      "heading": "Нашият подход",
+      "intro": "Прилагаме архитектурно-насочен модел на жизнения цикъл, който осигурява съответствие между бизнес целите, техническия дизайн и дългосрочната експлоатация.",
+      "lifecycleLabel": "Жизнен цикъл на доставка:",
+      "steps": "Откриване и анализ → Архитектура → Внедряване → Валидация → Операции → Оптимизация",
+      "para": "Партнираме си с бизнеси, управляващи сложни дигитални екосистеми, които изискват надеждност, сигурност и регулаторно съответствие.",
+      "envs": "Типичните среди включват финансови услуги, финтех, телекомуникации, SaaS и технологични платформи, глобални корпоративни IT екосистеми.",
+      "cta": "Научете повече"
+    },
+    "contactCta": {
+      "heading": "Свържете се с нас",
+      "desc": "Обсъдете вашите изисквания за инфраструктура, облак или хибридна архитектура с нашия инженерингов екип.",
+      "cta": "Заявка за консултация"
+    },
+    "whoWeAre": {
+      "tag": "Кои сме ние",
+      "heading": "Кои сме ние",
+      "intro1": "ITRB е технологичен партньор, фокусиран единствено върху корпоративна IT инфраструктура, хибридна архитектура и мисионно-критични среди. Ние проектираме, изграждаме и управляваме сигурни, надеждни и съвместими технологични екосистеми, съобразени с дългосрочната бизнес стратегия.",
+      "intro2": "Съчетавайки архитектурната дълбочина на глобален интегратор с фокуса на специализиран инженерингов екип, ITRB доставя хибридни, центрове за данни и облачни среди за организации, които изискват надеждност, съответствие и пълна отговорност за жизнения цикъл.",
+      "approach": {
+        "heading": "Подход и позициониране",
+        "desc": "ITRB не предлага универсални IT услуги. Всяко решение следва архитектурно-насочен модел на жизнения цикъл, базиран на структуриран анализ, разбиране на бизнеса и дългосрочна устойчивост. Нашата работа се фокусира върху сложни, регулирани и мисионно-критични среди, където инфраструктурата трябва да бъде надеждна, мащабируема и съобразена с регулаторните и оперативните изисквания."
+      },
+      "lifecycle": {
+        "heading": "Жизнен цикъл на доставка",
+        "intro": "Нашият структуриран процес гарантира, че решенията са внимателно проектирани, внедрени и поддържани през целия им жизнен цикъл.",
+        "steps": [
+          {
+            "title": "Откриване и анализ",
+            "desc": "Задълбочена оценка на бизнес изискванията, регулаторните рамки, оперативните зависимости и рисковите фактори."
+          },
+          {
+            "title": "Архитектурен дизайн",
+            "desc": "Разработка на високо- и ниско-нивови архитектури, съобразени с бизнес приоритетите и изискванията за съответствие."
+          },
+          {
+            "title": "Внедряване",
+            "desc": "Разгръщане на хибридни, облачни и on-premise инфраструктури с устойчиви, високопроизводителни системи."
+          },
+          {
+            "title": "Тестване и приемане",
+            "desc": "Валидиране на производителността, сигурността и съответствието преди оперативно предаване."
+          },
+          {
+            "title": "Документация и обучение",
+            "desc": "Изчерпателни ръководства и обучение гарантират, че клиентските екипи са напълно подготвени да управляват и поддържат системите."
+          },
+          {
+            "title": "Непрекъсната поддръжка и оптимизация",
+            "desc": "Постоянен мониторинг, поддръжка и оптимизация за осигуряване на дългосрочна надеждност и ефективност."
+          }
+        ]
+      },
+      "principles": {
+        "heading": "Ключови принципи",
+        "items": [
+          {
+            "title": "Архитектура преди технология",
+            "desc": "Решенията започват с изисквания и бизнес съответствие, а не с предварително дефинирани стекове."
+          },
+          {
+            "title": "Бизнес съответствие",
+            "desc": "Всяко проектно решение поддържа организационните цели и оперативните приоритети."
+          },
+          {
+            "title": "Регулаторна осведоменост",
+            "desc": "Съответствие, локализация на данните и сигурност са вградени от първия ден."
+          },
+          {
+            "title": "Устойчивост чрез дизайн",
+            "desc": "Системите са изградени за висока достъпност, излишък и непрекъсваемост."
+          },
+          {
+            "title": "Отговорност за жизнения цикъл",
+            "desc": "Пълно покритие от оценка през архитектура, внедряване, операции и оптимизация."
+          }
+        ]
+      },
+      "industries": {
+        "heading": "Индустрии, които поддържаме",
+        "intro": "Помагаме на организациите да представят, изградят и защитят своето дигитално бъдеще, поддържайки бизнеси, управляващи сложни, регулирани или мисионно-критични среди.",
+        "list": [
+          "Финансови услуги",
+          "Финтех",
+          "Телекомуникации",
+          "SaaS и технологични платформи",
+          "Глобални IT корпорации"
+        ]
+      }
+    },
+    "servicesPage": {
+      "tag": "Услуги",
+      "heading": "Услуги",
+      "intro": "Ние водим предприятията през целия технологичен жизнен цикъл - от дизайн и облачна трансформация до сигурно мрежово свързване и управлявани операции.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Архитектурен анализ и проектиране",
+          "desc": "Всеки наш проект започва със структурирана архитектурна оценка. Нашите експертни анализатори разработват индивидуални решения, съобразени с бизнес процесите, нивото на критичност на услугите, регулаторните изисквания, бюджетните параметри и бъдещия растеж.",
+          "list": [
+            "Оценка на инфраструктура и архитектура",
+            "Анализ на бизнес изисквания, регулаторна рамка и оперативни зависимости",
+            "Анализ на риска и въздействието",
+            "Балансиране на настоящия IT капацитет спрямо прогнозните нужди",
+            "Модели за оптимизация на разходи (CapEx / OpEx)",
+            "Изготвяне на High-Level и Low-Level архитектури",
+            "Технологично планиране (roadmapping)"
+          ]
+        },
+        {
+          "num": "02",
+          "title": "Виртуализация и центрове за данни",
+          "desc": "Проектираме и внедряваме устойчиви on-premise и private cloud среди, създадени да осигурят непрекъсната работа и надеждна производителност.",
+          "list": [
+            "Платформи за сървърна виртуализация (VMware, Hyper-V, Proxmox)",
+            "High-availability консолидирани клъстери",
+            "Софтуерно дефинирана инфраструктура",
+            "SAN / NAS / Distributed Storage решения",
+            "Изграждане на private cloud среди",
+            "Миграция и модернизация на legacy инфраструктури"
+          ]
+        },
+        {
+          "num": "03",
+          "title": "Cloud и хибридни инфраструктури",
+          "desc": "Проектираме и интегрираме сигурни cloud и хибридни архитектури, обхващащи пълен спектър – от локални центрове за данни и edge устройства до публични cloud платформи, съчетавайки гъвкавостта на облака с надеждността на локалната инфраструктура.",
+          "sub1": {
+            "title": "Cloud engineering",
+            "list": [
+              "Проектиране на публични cloud архитектури",
+              "Cloud migration стратегии",
+              "Multi-cloud интеграции",
+              "Infrastructure as Code (IaC) имплементация",
+              "Cloud governance и cost control модели"
+            ]
+          },
+          "sub2": {
+            "title": "Хибридна архитектура",
+            "list": [
+              "Свързаност между on-premise и cloud среди",
+              "Механизми за репликация и синхронизация",
+              "Географска излишност (geo-redundancy)",
+              "Disaster Recovery локации",
+              "Локализация на данни и compliance модели"
+            ]
+          }
+        },
+        {
+          "num": "04",
+          "title": "Мрежови архитектури и свързаност",
+          "desc": "Нашите мрежови специалисти проектират корпоративна мрежова инфраструктура, осигуряваща оптимална производителност за бизнес организации, центрове за данни и корпоративни комуникации.",
+          "sub1": {
+            "title": "Основни възможности",
+            "list": [
+              "Мрежова архитектура Layer 2 и Layer 3",
+              "Проектиране на Core / Distribution / Access мрежи",
+              "Внедряване на SD-WAN",
+              "Сигурни VPN и криптирани тунели",
+              "Международна свързаност и IP транзит",
+              "Data Center Interconnect (DCI)",
+              "MPLS интеграции"
+            ]
+          },
+          "sub2": {
+            "title": "Разширени мрежови услуги за по-сложни среди",
+            "list": [
+              "Оптимизация на трафик и latency-sensitive среди",
+              "Георестрикционни и контролирани достъпи",
+              "Geo-IP филтрация",
+              "Контрол на трансграничен пренос на данни",
+              "Мрежова сегментация и микро-сегментация"
+            ]
+          }
+        },
+        {
+          "num": "05",
+          "title": "Архив и възстановяване на данни",
+          "desc": "Чрез нашите решения за устойчиво съхранение на данни ще защитите информацията на вашата организация и осигурите непрекъснатост на работата. За критични информационни активи осигуряваме:",
+          "list": [
+            "Многослойни backup стратегии",
+            "Immutable backup решения",
+            "Offsite и cloud репликация",
+            "Disaster Recovery дизайн и тестове",
+            "RPO/RTO дефиниране",
+            "Backup encryption и защита от ransomware",
+            "Периодични DR симулации"
+          ]
+        },
+        {
+          "num": "06",
+          "title": "Сигурност и регулаторно съответствие",
+          "desc": "Имплементираме инфраструктурни рамки за сигурност, създадени за защита на корпоративни системи и поддръжка на регулаторно съответствие.",
+          "list": [
+            "Identity and Access Management (IAM)",
+            "Multi-Factor Authentication (MFA)",
+            "Оценка на уязвимости",
+            "Мрежова сегментация и zero-trust архитектура",
+            "Логване и мониторинг",
+            "Подготовка за регулаторни одити",
+            "Осигуряване на инфраструктурата"
+          ]
+        },
+        {
+          "num": "07",
+          "title": "Експертна поддръжка",
+          "desc": "Осигуряваме 24/7 техническа поддръжка и мониторинг, като работим със структурирани SLA рамки и ясно дефинирани нива на реакция.",
+          "list": [
+            "24/7 техническа поддръжка и мониторинг",
+            "Управление на инциденти и проблеми (Incident & Problem Management)",
+            "Дежурни инженерни екипи",
+            "Реакция при критични инциденти",
+            "Управление на patch-и и жизнен цикъл",
+            "Оптимизация на инфраструктурната производителност"
+          ]
+        },
+        {
+          "num": "08",
+          "title": "Продуктово инженерство",
+          "desc": "Ние създаваме висококачествени корпоративни софтуерни решения, които подобряват ефективността и автоматизират бизнес процесите.",
+          "list": [
+            "Персонализирана разработка на корпоративен софтуер",
+            "Backend системи и интеграция на платформи",
+            "API интеграции",
+            "UI/UX дизайн",
+            "Разработка на вътрешни системи и автоматизационни решения"
+          ]
+        },
+        {
+          "num": "09",
+          "title": "Проектен и бизнес мениджмънт",
+          "desc": "Нашите Project & Account Management екипи осигуряват ефективна реализация и трайна ангажираност на клиентите.",
+          "sub1": {
+            "title": "Project management",
+            "list": [
+              "Управление на инфраструктурни и трансформационни проекти",
+              "Контрол на срокове, бюджет и рискове",
+              "Координация с доставчици",
+              "Acceptance процедури"
+            ]
+          },
+          "sub2": {
+            "title": "Account management",
+            "list": [
+              "Мениджмънт на отношенията с клиенти",
+              "Дългосрочно технологично планиране",
+              "Регулярни review сесии",
+              "Оптимизация на средата"
+            ]
+          }
+        },
+        {
+          "num": "10",
+          "title": "Юридически и регулаторни услуги",
+          "desc": "Нашият правен екип предоставя експертни консултации в сферата на технологичното управление и регулаторното съответствие.",
+          "list": [
+            "Консултации по IT договори",
+            "Защита на данни и съответствие с GDPR",
+            "Подготовка за ISO сертификации (ISO 9001, ISO 20000-1, ISO 27001, ISO 37001)",
+            "Помощ при регулаторни изисквания в ЕС",
+            "Съответствие със софтуерни лицензи",
+            "Структуриране и управление на договори с доставчици"
+          ]
+        }
+      ]
+    },
+    "certificates": {
+      "heading": "ISO сертификати",
+      "intro": "Нашите системи за управление са сертифицирани според международно признати стандарти, което отразява нашия ангажимент към качество, информационна сигурност, управление на услугите и етично поведение.",
+      "a11yClose": "Затвори",
+      "a11yPrev": "Предишен",
+      "a11yNext": "Следващ",
+      "thumbsGroup": "Всички сертификати",
+      "items": [
+        {
+          "title": "ISO 9001 — Системи за управление на качеството",
+          "enImage": "images/certificates/2989-itrb-certificate-9001-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-9001-bg.jpg"
+        },
+        {
+          "title": "ISO/IEC 27001 — Управление на информационната сигурност",
+          "enImage": "images/certificates/2989-itrb-certificate-27001-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-27001-bg.jpg"
+        },
+        {
+          "title": "ISO/IEC 20000-1 — Управление на ИТ услуги",
+          "enImage": "images/certificates/2989-itrb-certificate-20000-en.jpg",
+          "bgImage": "images/certificates/2989-itrb-certificate-20000-bg.jpg"
+        },
+        {
+          "title": "ISO 37001 — Системи за управление срещу подкупване",
+          "enImage": "images/certificates/3019-itrb-certificate-37001-en.jpg",
+          "bgImage": "images/certificates/3019-itrb-certificate-37001-bg.jpg"
+        }
+      ]
+    },
+    "team": {
+      "tag": "Нашият екип",
+      "heading": "Хората зад ITRB",
+      "sub": "Разнообразен екип от експерти, обединени от страст към технологиите и ангажимент към съвършенство.",
+      "viewProfile": "Виж профила",
+      "members": [
+        {
+          "name": "Асен Цонев",
+          "role": "Ръководител PMO",
+          "bio": "Ръководител PMO с над 15 години опит в управлението на сложни, трансгранични проекти. Носител на наградата \"PMO на годината\" от PMI, специализира в превръщането на стратегическата визия в дисциплинирано изпълнение и измерими резултати."
+        },
+        {
+          "name": "Екатерина Делчева",
+          "role": "Финансов директор",
+          "bio": "Старши счетоводен професионалист с 36 години международен опит в различни индустрии. Със задълбочени познания в ERP системите, включително SAP, тя осигурява финансова прецизност, оперативна стабилност и дисциплинирано управление на процесите."
+        },
+        {
+          "name": "Елена Петрова",
+          "role": "Старши специалист подбор на персонал",
+          "bio": "Старши специалист по подбор на персонал с над 10 години опит в техническия и изпълнителския подбор в Европа. Ръководи привличането на таланти със стратегически фокус, осигурявайки висококвалифицирани професионалисти."
+        },
+        {
+          "name": "Момчил Пакьов",
+          "role": "Ръководител UX/UI Дизайн",
+          "bio": "UX и графичен дизайнер с над десет години опит в брандирането, дигиталните продукти и дизайн системите. Съчетава стратегическото продуктово мислене с изтънчено визуално изпълнение."
+        },
+        {
+          "name": "Владимир Николов",
+          "role": "Ръководител Човешки ресурси",
+          "bio": "Ръководител Човешки ресурси с над 13 години опит в организационното развитие, стратегията за таланти и оперативното структуриране. Изгражда високоефективни култури, съобразени с бизнес целите."
+        },
+        {
+          "name": "Владислав Йорданов",
+          "role": "Ръководител Техническа поддръжка",
+          "bio": "Лидер в техническата и клиентска поддръжка с 15 години опит в SaaS и финансовите услуги. Водил е международни екипи и поддържа сложни продуктови стартирания."
+        },
+        {
+          "name": "Здравко Здравков",
+          "role": "IT и Телеком специалист",
+          "bio": "IT и телеком професионалист с над 20 години опит в UNIX системи, виртуализация и киберсигурност. Ръководи проектирането и поддръжката на устойчиви, мащабируеми IT инфраструктури."
+        },
+        {
+          "name": "Емре Сакал",
+          "role": "Ръководител Техническа поддръжка",
+          "bio": "С над пет години опит в операциите и управлението на екипи, специализира в лидерство, управление на производителността и оптимизация на процесите."
+        }
+      ]
+    },
+    "contact": {
+      "tag": "Свържете се с нас",
+      "heading": "Нека работим заедно",
+      "desc": "Обсъдете вашите изисквания за инфраструктура, облак или хибридна архитектура с нашия инженерингов екип.",
+      "address": "бул. Витоша 42, 1000 София, България",
+      "email": "info@itrb.org",
+      "form": {
+        "name": "Име",
+        "email": "Имейл",
+        "subject": "Тема",
+        "message": "Съобщение",
+        "submit": "Изпрати съобщение",
+        "captcha": "Анти-спам проверка:",
+        "agree": "Съгласен/на съм личните ми данни да бъдат обработвани в съответствие с <a href=\"privacy-policy.html\" target=\"_blank\">Политиката за поверителност</a>."
+      },
+      "success": "✓ Благодарим ви! Ще се свържем с вас скоро.",
+      "error": "✕ Възникна грешка. Моля, опитайте отново или ни пишете директно на имейл.",
+      "fieldRequired": "Това поле е задължително.",
+      "emailInvalid": "Моля, въведете валиден имейл адрес."
+    },
+    "careers": {
+      "hero": {
+        "title": "Кариери",
+        "intro": "Предоставяме възможности за професионалисти на различни етапи от тяхното развитие – от амбициозни начинаещи, които са жадни за знания, до опитни експерти, търсещи да решават сложни предизвикателства. Тук можете да намерите нашите текущи свободни позиции."
+      },
+      "filter": {
+        "all": "Всички",
+        "city": "Град",
+        "department": "Отдел",
+        "search": "Търсене",
+        "searchPlaceholder": "Търси по заглавие…",
+        "clearCity": "Изчисти филтъра за град",
+        "clearDepartment": "Изчисти филтъра за отдел",
+        "clearSearch": "Изчисти търсенето",
+        "city": {
+          "sofia": "София"
+        },
+        "dept": {
+          "administration": "Администрация",
+          "finance": "Финанси",
+          "humanResources": "Човешки ресурси",
+          "engineering": "Инженеринг",
+          "architecture": "Архитектура"
+        }
+      },
+      "listEmpty": "Няма позиции, отговарящи на вашите филтри.",
+      "listEmptyNoJobs": "<h2>В момента нямаме отворени позиции.</h2><br><p>Актуализираме този списък редовно — моля, проверете отново скоро. Ако трябва да се свържете с нас за нещо друго, ще намерите нашите данни за контакт на страницата Контакти.</p>",
+      "location": "Локация:",
+      "type": "Тип:",
+      "card": {
+        "apply": "Виж детайли →"
+      },
+      "positions": [
+        {
+          "id": "1",
+          "title": "Senior DevOps Инженер",
+          "location": "София, България / Отдалечена работа",
+          "type": "Пълно работно време",
+          "description": "Търсим опитен DevOps инженер, който да помогне за изграждането и поддръжката на нашата облачна инфраструктура. Ще работите с най-съвременни технологии и ще бъдете част от колаборативен екип.",
+          "department": "Инженеринг",
+          "city": "sofia",
+          "requirements": [
+            "5+ години опит като DevOps или SRE",
+            "Солиден опит с AWS, Azure или GCP",
+            "Познания по Terraform, Kubernetes и CI/CD пайплайни",
+            "Опит със системи за мониторинг като Prometheus, Grafana",
+            "Отлични комуникационни умения и умения за решаване на проблеми"
+          ],
+          "niceToHave": [
+            "Опит с GitOps (ArgoCD, Flux)",
+            "Познания в областта на сигурността",
+            "Участие в open source проекти"
+          ]
+        },
+        {
+          "id": "2",
+          "title": "Cloud Архитект",
+          "location": "София, България / Хибридна",
+          "type": "Пълно работно време",
+          "description": "Присъединете се към нашия архитектурен екип, за да проектирате и внедрявате облачни решения за корпоративни клиенти. Ще работите по сложни проекти и ще ръководите технически решения.",
+          "department": "Архитектура",
+          "city": "sofia",
+          "requirements": [
+            "7+ години опит в IT инфраструктурата",
+            "Задълбочени познания за облачни архитектури (AWS, Azure, GCP)",
+            "Опит с хибридни облачни решения",
+            "Силни познания по мрежи и сигурност",
+            "Отлични умения за документация и комуникация"
+          ],
+          "niceToHave": [
+            "Релевантни сертификати (AWS Solutions Architect, Azure Solutions Architect)",
+            "Опит с VMware и on-premise инфраструктура",
+            "Предишен консултантски опит"
+          ]
+        },
+        {
+          "id": "3",
+          "title": "Сътрудник Човешки ресурси",
+          "location": "София, България",
+          "type": "Пълно работно време",
+          "description": "Търсим сътрудник Човешки ресурси, който да подпомага разрастващия ни се екип. Ще се занимавате с набиране на персонал, onboarding и взаимоотношения със служителите.",
+          "department": "Човешки ресурси",
+          "city": "sofia",
+          "requirements": [
+            "1-2 години опит в HR или подбор на персонал",
+            "Отлични комуникативни и организационни умения",
+            "Познания по трудово право",
+            "Свободен английски и български език"
+          ],
+          "niceToHave": [
+            "Опит с HRIS системи",
+            "Опит в IT/технологични компании"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "Офис рецепционист",
+          "location": "София, България",
+          "type": "Пълно работно време",
+          "description": "Търсим приятелски настроен и организиран офис рецепционист, който да бъде първата точка за контакт за посетители и да се грижи за административни задачи.",
+          "department": "Администрация",
+          "city": "sofia",
+          "requirements": [
+            "Отлични комуникативни умения",
+            "Професионална външност и позитивно отношение",
+            "Компютърна грамотност (MS Office)",
+            "Свободен английски и български език"
+          ],
+          "niceToHave": [
+            "Предишен опит на подобна позиция",
+            "Познания по офис управление"
+          ]
+        },
+        {
+          "id": "5",
+          "title": "Счетоводител",
+          "location": "София, България",
+          "type": "Пълно работно време",
+          "description": "Присъединете се към финансовия ни екип като счетоводител. Ще управлявате финансови записи, ще подготвяте отчети и ще гарантирате съответствие.",
+          "department": "Финанси",
+          "city": "sofia",
+          "requirements": [
+            "Бакалавърска степен по Счетоводство или Финанси",
+            "3+ години опит като счетоводител",
+            "Познания по счетоводен софтуер",
+            "Внимание към детайла"
+          ],
+          "niceToHave": [
+            "Опит със SAP или подобни ERP системи",
+            "Сертификат за професионален счетоводител"
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "copy": "© 2026 ITRB. Всички права запазени.",
+      "privacy": "Политика за поверителност"
+    }
+  }
+}
