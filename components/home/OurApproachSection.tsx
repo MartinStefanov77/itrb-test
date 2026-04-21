@@ -13,7 +13,7 @@ type Props = {
 
 export function OurApproachSection({ heading, paragraphs, image, imageAlt, ctaLabel, ctaHref }: Props) {
   return (
-    <Section id="our-approach" className={`section bg-dark ${styles.root}`}>
+    <Section id="our-approach" className={`section bg-dark deco deco--rotated ${styles.root}`}>
       <Container>
         <div className="split">
           <div className="split-media reveal-left">

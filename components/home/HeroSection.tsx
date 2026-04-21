@@ -29,6 +29,10 @@ export function HeroSection({ titleLine1, titleLine2, subtitle, subtitleSmall, c
           <a href={ctaHref} className="btn btn-primary">{ctaLabel}</a>
         </div>
       </div>
+      <div className="hero-scroll">
+        <div className="scroll-dot"></div>
+        <div className="scroll-line-wrap"><div className="scroll-line"></div></div>
+      </div>
     </section>
   );
 }

@@ -9,7 +9,9 @@
   },
   "whatWeDo": {
     "heading": "What We Do",
-    "text": "We deliver end-to-end enterprise infrastructure solutions from architecture and implementation to continuous operations and compliance alignment.",
+    "paragraphs": ["We deliver end-to-end enterprise infrastructure solutions - from architecture and implementation to continuous operations and compliance alignment - Personal Data Protection, Information Security, Critical Infrastructure and Cybersecurity, Financial and Regulatory Requirements, Compliance with Industry Standards, Local Legal Requirements.",
+    "Specializing in hybrid environments, data center and cloud architecture, secure networking, and business-critical continuity systems, we provide solutions tailored for global organizations."
+    ],
     "image": "/images/about-photo.svg",
     "imageAlt": "ITRB infrastructure team"
   },
