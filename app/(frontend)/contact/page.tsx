@@ -1,10 +1,13 @@
+import { RevealInteractions } from "@/components/site/RevealInteractions";
+
 export default function ContactPage() {
   return (
     <main id="main-content" data-page="contact">
+      <RevealInteractions />
       <section className="section contact">
         <div className="container">
           <div className="contact-grid">
-            <div className="contact-info">
+            <div className="contact-info reveal-left">
               <h2 className="section-heading">Let&apos;s Work Together</h2>
               <p>Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.</p>
               <ul className="contact-details">
@@ -21,7 +24,7 @@ export default function ContactPage() {
               <img src="/images/contact.svg" alt="" role="presentation" />
             </div>
             </div>
-            <div className="contact-form-wrap">
+            <div className="contact-form-wrap reveal-right">
               <form className="contact-form" id="contactForm" noValidate>
                 <div className="form-honeypot" aria-hidden="true">
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" />

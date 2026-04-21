@@ -1,6 +1,7 @@
 import styles from "./WhoWeArePage.module.scss";
 import { TeamSlider } from "./TeamSlider";
 import { WhoWeAreInteractions } from "./WhoWeAreInteractions";
+import {RevealInteractions} from '@/components/site/RevealInteractions'
 import { WhoWeAreCertLightbox } from "./WhoWeAreCertLightbox";
 import { Container } from "@/components/layout/Container";
 import { PageHero } from "@/components/layout/PageHero";
@@ -24,7 +25,9 @@ type WhoWeAreData = {
 export function WhoWeArePage({ data }: { data: WhoWeAreData }) {
   return (
     <main id="main-content" data-page="who-we-are" className={styles.root}>
-      <WhoWeAreInteractions />
+
+      <RevealInteractions />
+    
       <PageHero className="page-hero page-hero--bg page-hero--wide" title={data.hero.title} subtitle={data.hero.intro1}>
         <p className="page-hero-sub page-hero-sub--mt">{data.hero.intro2}</p>
       </PageHero>
