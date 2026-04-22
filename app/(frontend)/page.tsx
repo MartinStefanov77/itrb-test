@@ -7,6 +7,7 @@ import { OurEdgeSection } from "@/components/home/OurEdgeSection";
 import { ServicesOverviewSection } from "@/components/home/ServicesOverviewSection";
 import { WhatWeDoSection } from "@/components/home/WhatWeDoSection";
 
+
 export default function Home() {
   return (
     <main id="main-content" data-page="home">
