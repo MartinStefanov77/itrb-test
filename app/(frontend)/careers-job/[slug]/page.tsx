@@ -37,9 +37,17 @@ export default async function CareersJobPage({
                 <h2 className="careers-job-section-title">What we offer</h2>
                 <ul className="careers-prose">{job.offer.map((v) => <li key={v}>{v}</li>)}</ul>
               </section>
+              <p className="careers-job-note">We treat all applications confidentially. Only shortlisted candidates will be contacted for an interview.</p>
             </div>
           </div>
         </header>
+        <div className="container careers-job-cta-wrap">
+          <aside className="careers-job-cta" aria-labelledby="careers-j1-cta-title">
+            <h2 id="careers-j1-cta-title" className="careers-job-cta-title" >Apply for this position</h2>
+            <p className="careers-job-cta-sub" >We will contact you if your profile is a good fit for the role.</p>
+            <a href={job.applyUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer" >Apply</a>
+          </aside>
+        </div>
       </article>
     </main>
   );
