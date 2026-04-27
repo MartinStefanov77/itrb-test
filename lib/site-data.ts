@@ -1,9 +1,9 @@
 export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/who-we-are", label: "Who we are" },
-  { href: "/careers", label: "Careers" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", labelKey: "nav.home" },
+  { href: "/services", labelKey: "nav.services" },
+  { href: "/who-we-are", labelKey: "nav.whoWeAre" },
+  { href: "/careers", labelKey: "nav.careers" },
+  { href: "/contact", labelKey: "nav.contact" },
 ];
 
 export type ServiceItem = {

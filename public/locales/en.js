@@ -1,4 +1,4 @@
-const LOCALE_EN = {
+export const LOCALE_EN = {
   "nav.home": "Home",
   "nav.about": "About",
   "nav.services": "Services",
@@ -107,109 +107,150 @@ const LOCALE_EN = {
   "careers.detail.applyPanelText":
     "Apply through our company profile on jobs.bg using the button below. We review every application carefully.",
   "careers.detail.applyCtaTitle": "Apply for this position",
-  "careers.detail.applyCtaSub": "We will contact you if your profile is a good fit for the role.",
+  "careers.detail.applyCtaSub":
+    "We will contact you if your profile is a good fit for the role.",
 
   "home.hero.title1": "Complex infrastructure.",
   "home.hero.title2": "Engineered right.",
-  "home.hero.subtitle": "Architecture-driven infrastructure, cloud, and network solutions for mission-critical enterprise environments.",
-  "home.hero.subtitle2": "We design, build, and operate resilient IT ecosystems aligned with business strategy, regulatory requirements, and long-term scalability.",
+  "home.hero.subtitle":
+    "Architecture-driven infrastructure, cloud, and network solutions for mission-critical enterprise environments.",
+  "home.hero.subtitle2":
+    "We design, build, and operate resilient IT ecosystems aligned with business strategy, regulatory requirements, and long-term scalability.",
   "home.hero.cta": "Talk to us",
 
   "home.whatWeDo.tag": "What We Do",
   "home.whatWeDo.heading": "What We Do",
-  "home.whatWeDo.p1": "We deliver end-to-end enterprise infrastructure solutions – from architecture and implementation to continuous operations and compliance alignment - Personal Data Protection, Information Security, Critical Infrastructure and Cybersecurity, Financial and Regulatory Requirements, Compliance with Industry Standards, Local Legal Requirements..",
-  "home.whatWeDo.p2": "Specializing in hybrid environments, data center and cloud architecture, secure networking, and business-critical continuity systems, we provide solutions tailored for global organizations.",
+  "home.whatWeDo.p1":
+    "We deliver end-to-end enterprise infrastructure solutions – from architecture and implementation to continuous operations and compliance alignment - Personal Data Protection, Information Security, Critical Infrastructure and Cybersecurity, Financial and Regulatory Requirements, Compliance with Industry Standards, Local Legal Requirements..",
+  "home.whatWeDo.p2":
+    "Specializing in hybrid environments, data center and cloud architecture, secure networking, and business-critical continuity systems, we provide solutions tailored for global organizations.",
 
   "home.services.tag": "Services",
   "home.services.heading": "Services",
   "home.services.s1": "Architecture & Infrastructure Consulting",
-  "home.services.s1.desc": "Structured assessment, architecture design, and technology roadmaps for complex enterprise environments.",
+  "home.services.s1.desc":
+    "Structured assessment, architecture design, and technology roadmaps for complex enterprise environments.",
   "home.services.s2": "Virtualization & Data Center",
-  "home.services.s2.desc": "High-availability on-premise and private cloud infrastructures built on modern virtualization, resilient storage, and scalable compute platforms.",
+  "home.services.s2.desc":
+    "High-availability on-premise and private cloud infrastructures built on modern virtualization, resilient storage, and scalable compute platforms.",
   "home.services.s3": "Cloud & Hybrid Infrastructure",
-  "home.services.s3.desc": "Secure hybrid and multi-cloud architectures connecting data centers, edge infrastructure, and public cloud environments.",
+  "home.services.s3.desc":
+    "Secure hybrid and multi-cloud architectures connecting data centers, edge infrastructure, and public cloud environments.",
   "home.services.s4": "Network Architecture & Connectivity",
-  "home.services.s4.desc": "Secure, segmented, and high-performance connectivity across sites, regions, and cloud environments.",
+  "home.services.s4.desc":
+    "Secure, segmented, and high-performance connectivity across sites, regions, and cloud environments.",
   "home.services.s5": "Backup & Business Continuity",
-  "home.services.s5.desc": "Immutable backups, disaster recovery, and resilience strategies ensuring operational continuity.",
+  "home.services.s5.desc":
+    "Immutable backups, disaster recovery, and resilience strategies ensuring operational continuity.",
   "home.services.s6": "Security & Compliance",
-  "home.services.s6.desc": "Infrastructure hardening, access control, monitoring, and regulatory-aligned security architecture.",
+  "home.services.s6.desc":
+    "Infrastructure hardening, access control, monitoring, and regulatory-aligned security architecture.",
   "home.services.s7": "Managed Infrastructure & Operations",
-  "home.services.s7.desc": "24/7 monitoring, incident response, and lifecycle management for enterprise infrastructure environments.",
+  "home.services.s7.desc":
+    "24/7 monitoring, incident response, and lifecycle management for enterprise infrastructure environments.",
   "home.services.s8": "Development & Product Engineering",
-  "home.services.s8.desc": "Custom enterprise software, system integrations, and automation solutions.",
+  "home.services.s8.desc":
+    "Custom enterprise software, system integrations, and automation solutions.",
   "home.services.cta": "View all services",
 
   "home.edge.tag": "Our Edge",
   "home.edge.heading": "Our Edge",
   "home.edge.e1.title": "Architecture-first",
-  "home.edge.e1.desc": "Solutions designed around requirements and constraints – not predefined technology stacks.",
+  "home.edge.e1.desc":
+    "Solutions designed around requirements and constraints – not predefined technology stacks.",
   "home.edge.e2.title": "Enterprise-grade reliability",
-  "home.edge.e2.desc": "We build infrastructures for high-availability, mission-critical operations, and long-term operational resilience.",
+  "home.edge.e2.desc":
+    "We build infrastructures for high-availability, mission-critical operations, and long-term operational resilience.",
   "home.edge.e3.title": "Hybrid specialization",
-  "home.edge.e3.desc": "Seamless integration of on-premise, data center, and cloud environments into unified, high-performance ecosystems.",
+  "home.edge.e3.desc":
+    "Seamless integration of on-premise, data center, and cloud environments into unified, high-performance ecosystems.",
   "home.edge.e4.title": "Regulatory alignment",
-  "home.edge.e4.desc": "Infrastructure designed to meet compliance, data locality, and security requirements.",
+  "home.edge.e4.desc":
+    "Infrastructure designed to meet compliance, data locality, and security requirements.",
   "home.edge.e5.title": "Lifecycle ownership",
-  "home.edge.e5.desc": "Full infrastructure lifecycle: assessment → architecture → build → operations → compliance.",
+  "home.edge.e5.desc":
+    "Full infrastructure lifecycle: assessment → architecture → build → operations → compliance.",
   "home.edge.e6.title": "Engineering-led delivery",
-  "home.edge.e6.desc": "Direct access to architects and engineers supported by account managers for smooth coordination.",
+  "home.edge.e6.desc":
+    "Direct access to architects and engineers supported by account managers for smooth coordination.",
 
   "home.approach.tag": "Our Approach",
   "home.approach.heading": "Our Approach",
-  "home.approach.intro": "We apply an architecture-driven lifecycle model ensuring alignment between business objectives, technical design, and long-term operations.",
+  "home.approach.intro":
+    "We apply an architecture-driven lifecycle model ensuring alignment between business objectives, technical design, and long-term operations.",
   "home.approach.lifecycleLabel": "Delivery Lifecycle:",
-  "home.approach.steps": "Discovery & Analysis → Architecture → Implementation → Validation → Operations → Optimization",
-  "home.approach.para": "We partner with businesses operating complex digital ecosystems that demand reliability, security, and regulatory compliance.",
-  "home.approach.envs": "Typical environments include financial services, fintech, telecommunications, SaaS and technology platforms, global corporate IT ecosystems.",
-  "home.cert.teaser": "Our operations are backed by internationally recognized <a href=\"who-we-are.html#certificates\" class=\"cert-inline-link\">ISO certifications</a>.",
+  "home.approach.steps":
+    "Discovery & Analysis → Architecture → Implementation → Validation → Operations → Optimization",
+  "home.approach.para":
+    "We partner with businesses operating complex digital ecosystems that demand reliability, security, and regulatory compliance.",
+  "home.approach.envs":
+    "Typical environments include financial services, fintech, telecommunications, SaaS and technology platforms, global corporate IT ecosystems.",
+  "home.cert.teaser":
+    'Our operations are backed by internationally recognized <a href="who-we-are.html#certificates" class="cert-inline-link">ISO certifications</a>.',
   "home.approach.cta": "Learn more",
 
   "home.contactCta.heading": "Contact us",
-  "home.contactCta.desc": "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
+  "home.contactCta.desc":
+    "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
   "home.contactCta.cta": "Request consultation",
 
   "wwa.tag": "Who We Are",
   "wwa.heading": "Who We Are",
-  "wwa.intro1": "ITRB is a technology partner focused exclusively on enterprise IT infrastructure, hybrid architecture, and mission-critical environments. We design, build, and operate secure, reliable, and compliant technology ecosystems aligned with long-term business strategy.",
-  "wwa.intro2": "Combining the architectural depth of a global integrator with the focus of a specialized engineering team, ITRB delivers hybrid, data center, and cloud environments for organizations that require reliability, compliance, and lifecycle ownership.",
+  "wwa.intro1":
+    "ITRB is a technology partner focused exclusively on enterprise IT infrastructure, hybrid architecture, and mission-critical environments. We design, build, and operate secure, reliable, and compliant technology ecosystems aligned with long-term business strategy.",
+  "wwa.intro2":
+    "Combining the architectural depth of a global integrator with the focus of a specialized engineering team, ITRB delivers hybrid, data center, and cloud environments for organizations that require reliability, compliance, and lifecycle ownership.",
 
   "wwa.approach.tag": "Approach & Positioning",
   "wwa.approach.heading": "Approach & Positioning",
-  "wwa.approach.desc": "ITRB does not offer one-size-fits-all IT services. Every solution follows an architecture-driven lifecycle model based on structured analysis, business understanding, and long-term sustainability. Our work focuses on complex, regulated, and mission-critical environments, where infrastructure must be reliable, scalable, and aligned with regulatory and operational requirements.",
+  "wwa.approach.desc":
+    "ITRB does not offer one-size-fits-all IT services. Every solution follows an architecture-driven lifecycle model based on structured analysis, business understanding, and long-term sustainability. Our work focuses on complex, regulated, and mission-critical environments, where infrastructure must be reliable, scalable, and aligned with regulatory and operational requirements.",
 
   "wwa.lifecycle.tag": "Delivery Lifecycle",
   "wwa.lifecycle.heading": "Delivery Lifecycle",
-  "wwa.lifecycle.intro": "Our structured process guarantees that solutions are thoughtfully designed, implemented, and maintained across their entire lifecycle.",
+  "wwa.lifecycle.intro":
+    "Our structured process guarantees that solutions are thoughtfully designed, implemented, and maintained across their entire lifecycle.",
   "wwa.lifecycle.s1.title": "Discovery & Analysis",
-  "wwa.lifecycle.s1.desc": "In-depth assessment of business requirements, regulatory frameworks, operational dependencies, and risk factors.",
+  "wwa.lifecycle.s1.desc":
+    "In-depth assessment of business requirements, regulatory frameworks, operational dependencies, and risk factors.",
   "wwa.lifecycle.s2.title": "Architectural Design",
-  "wwa.lifecycle.s2.desc": "Development of high-level and detailed architectures aligned with business priorities and compliance requirements.",
+  "wwa.lifecycle.s2.desc":
+    "Development of high-level and detailed architectures aligned with business priorities and compliance requirements.",
   "wwa.lifecycle.s3.title": "Implementation",
-  "wwa.lifecycle.s3.desc": "Deployment of hybrid, cloud, and on-premise infrastructures with resilient, high-performance systems.",
+  "wwa.lifecycle.s3.desc":
+    "Deployment of hybrid, cloud, and on-premise infrastructures with resilient, high-performance systems.",
   "wwa.lifecycle.s4.title": "Testing & Acceptance",
-  "wwa.lifecycle.s4.desc": "Validation of performance, security, and compliance before operational handover.",
+  "wwa.lifecycle.s4.desc":
+    "Validation of performance, security, and compliance before operational handover.",
   "wwa.lifecycle.s5.title": "Documentation & Training",
-  "wwa.lifecycle.s5.desc": "Comprehensive guides and training ensure client teams are fully equipped to operate and maintain systems.",
+  "wwa.lifecycle.s5.desc":
+    "Comprehensive guides and training ensure client teams are fully equipped to operate and maintain systems.",
   "wwa.lifecycle.s6.title": "Continuous Support & Optimization",
-  "wwa.lifecycle.s6.desc": "Ongoing monitoring, maintenance, and optimization to ensure long-term reliability and efficiency.",
+  "wwa.lifecycle.s6.desc":
+    "Ongoing monitoring, maintenance, and optimization to ensure long-term reliability and efficiency.",
 
   "wwa.principles.tag": "Key Principles",
   "wwa.principles.heading": "Key Principles",
   "wwa.principles.p1.title": "Architecture before technology",
-  "wwa.principles.p1.desc": "Solutions start with requirements and business alignment, not predefined stacks.",
+  "wwa.principles.p1.desc":
+    "Solutions start with requirements and business alignment, not predefined stacks.",
   "wwa.principles.p2.title": "Business alignment",
-  "wwa.principles.p2.desc": "Every design decision supports organizational objectives and operational priorities.",
+  "wwa.principles.p2.desc":
+    "Every design decision supports organizational objectives and operational priorities.",
   "wwa.principles.p3.title": "Regulatory awareness",
-  "wwa.principles.p3.desc": "Compliance, data locality, and security are embedded from day one.",
+  "wwa.principles.p3.desc":
+    "Compliance, data locality, and security are embedded from day one.",
   "wwa.principles.p4.title": "Resilience by design",
-  "wwa.principles.p4.desc": "Systems are built for high availability, redundancy, and continuity.",
+  "wwa.principles.p4.desc":
+    "Systems are built for high availability, redundancy, and continuity.",
   "wwa.principles.p5.title": "Lifecycle ownership",
-  "wwa.principles.p5.desc": "Full coverage from assessment through architecture, implementation, operations, and optimization.",
+  "wwa.principles.p5.desc":
+    "Full coverage from assessment through architecture, implementation, operations, and optimization.",
 
   "wwa.industries.tag": "Industries We Support",
   "wwa.industries.heading": "Industries We Support",
-  "wwa.industries.intro": "We help organizations imagine, build, and secure their digital future, supporting businesses operating complex, regulated, or mission-critical environments.",
+  "wwa.industries.intro":
+    "We help organizations imagine, build, and secure their digital future, supporting businesses operating complex, regulated, or mission-critical environments.",
   "wwa.industries.i1": "Financial services",
   "wwa.industries.i2": "Fintech",
   "wwa.industries.i3": "Telecommunications",
@@ -217,8 +258,9 @@ const LOCALE_EN = {
   "wwa.industries.i5": "Global IT corporations",
 
   "wwa.cert.heading": "ISO certifications",
-  "wwa.cert.intro1": "Our management systems are certified against internationally recognized standards, reflecting our commitment to quality, information security, service management, and ethical conduct.",
-  
+  "wwa.cert.intro1":
+    "Our management systems are certified against internationally recognized standards, reflecting our commitment to quality, information security, service management, and ethical conduct.",
+
   "wwa.cert.c1.title": "ISO 9001 — Quality management systems",
   "wwa.cert.c2.title": "ISO/IEC 27001 — Information security management",
   "wwa.cert.c3.title": "ISO/IEC 20000-1 — IT service management",
@@ -230,13 +272,16 @@ const LOCALE_EN = {
 
   "srv.tag": "Services",
   "srv.heading": "Services",
-  "srv.intro": "We guide enterprises through the complete technology lifecycle, from design and cloud transformation to secure networking and managed operations.",
+  "srv.intro":
+    "We guide enterprises through the complete technology lifecycle, from design and cloud transformation to secure networking and managed operations.",
 
   "srv.s1.title": "Consulting & Advisory",
-  "srv.s1.desc": "Every client project begins with a structured architectural assessment, ensuring technology decisions are aligned with business goals, operational realities, and regulatory requirements. Our expert analysts craft tailored solutions that consider business processes, service criticality, regulatory obligations, budget parameters, and future growth.",
+  "srv.s1.desc":
+    "Every client project begins with a structured architectural assessment, ensuring technology decisions are aligned with business goals, operational realities, and regulatory requirements. Our expert analysts craft tailored solutions that consider business processes, service criticality, regulatory obligations, budget parameters, and future growth.",
   "srv.s1.label": "Our services cover:",
   "srv.s1.li1": "Infrastructure & architecture assessment",
-  "srv.s1.li2": "Analysis of business requirements, regulatory framework, and operational dependencies",
+  "srv.s1.li2":
+    "Analysis of business requirements, regulatory framework, and operational dependencies",
   "srv.s1.li3": "Risk & impact analysis",
   "srv.s1.li4": "Capacity planning & scalability modeling",
   "srv.s1.li5": "Cost optimization models (CapEx / OpEx)",
@@ -244,9 +289,11 @@ const LOCALE_EN = {
   "srv.s1.li7": "Technology roadmapping",
 
   "srv.s2.title": "Virtualization & Data Center",
-  "srv.s2.desc": "We design and deploy resilient on-premise and private cloud environments built for high availability, performance, and scalability.",
+  "srv.s2.desc":
+    "We design and deploy resilient on-premise and private cloud environments built for high availability, performance, and scalability.",
   "srv.s2.label": "Our services cover:",
-  "srv.s2.li1": "Enterprise virtualization platforms (VMware, Hyper-V, Proxmox)",
+  "srv.s2.li1":
+    "Enterprise virtualization platforms (VMware, Hyper-V, Proxmox)",
   "srv.s2.li2": "Consolidated high-availability clusters",
   "srv.s2.li3": "Software-defined infrastructures",
   "srv.s2.li4": "SAN / NAS / Distributed Storage solutions",
@@ -254,7 +301,8 @@ const LOCALE_EN = {
   "srv.s2.li6": "Migration and modernization of legacy infrastructures",
 
   "srv.s3.title": "Cloud & Hybrid Infrastructure",
-  "srv.s3.desc": "We architect and integrate secure cloud and hybrid environments, connecting data centers, cloud platforms, and distributed systems. Our solutions cover the full cloud spectrum – from local and edge environments to public cloud platforms – combining the flexibility of cloud with the reliability of on-premise infrastructure.",
+  "srv.s3.desc":
+    "We architect and integrate secure cloud and hybrid environments, connecting data centers, cloud platforms, and distributed systems. Our solutions cover the full cloud spectrum – from local and edge environments to public cloud platforms – combining the flexibility of cloud with the reliability of on-premise infrastructure.",
   "srv.s3.sub1.title": "Cloud Engineering",
   "srv.s3.sub1.li1": "Public cloud architecture design",
   "srv.s3.sub1.li2": "Cloud migration strategies",
@@ -262,14 +310,16 @@ const LOCALE_EN = {
   "srv.s3.sub1.li4": "Infrastructure as Code (IaC) implementation",
   "srv.s3.sub1.li5": "Cloud governance and cost-control frameworks",
   "srv.s3.sub2.title": "Hybrid Architecture",
-  "srv.s3.sub2.li1": "Secure connectivity between on-premise and cloud environments",
+  "srv.s3.sub2.li1":
+    "Secure connectivity between on-premise and cloud environments",
   "srv.s3.sub2.li2": "Replication and synchronization mechanisms",
   "srv.s3.sub2.li3": "Geographic redundancy (geo-redundancy)",
   "srv.s3.sub2.li4": "Disaster Recovery environments",
   "srv.s3.sub2.li5": "Data locality and compliance frameworks",
 
   "srv.s4.title": "Network Architecture & Connectivity",
-  "srv.s4.desc": "Our network specialists design enterprise-grade connectivity solutions that enable secure, high-performance communication across distributed infrastructure environments.",
+  "srv.s4.desc":
+    "Our network specialists design enterprise-grade connectivity solutions that enable secure, high-performance communication across distributed infrastructure environments.",
   "srv.s4.sub1.title": "Core capabilities",
   "srv.s4.sub1.li1": "Layer 2 and Layer 3 network architecture",
   "srv.s4.sub1.li2": "Core / Distribution / Access network design",
@@ -286,7 +336,8 @@ const LOCALE_EN = {
   "srv.s4.sub2.li5": "Network segmentation and micro-segmentation",
 
   "srv.s5.title": "Backup & Business Continuity",
-  "srv.s5.desc": "For mission-critical information, we design resilient data protection and recovery strategies that minimize downtime and ensure continuous operations in the event of disruption.",
+  "srv.s5.desc":
+    "For mission-critical information, we design resilient data protection and recovery strategies that minimize downtime and ensure continuous operations in the event of disruption.",
   "srv.s5.label": "Our services cover:",
   "srv.s5.li1": "Multi-layer backup strategies",
   "srv.s5.li2": "Immutable backup solutions",
@@ -297,7 +348,8 @@ const LOCALE_EN = {
   "srv.s5.li7": "Periodic disaster recovery simulations",
 
   "srv.s6.title": "Security & Compliance",
-  "srv.s6.desc": "We implement infrastructure security frameworks designed to protect enterprise systems and support regulatory compliance.",
+  "srv.s6.desc":
+    "We implement infrastructure security frameworks designed to protect enterprise systems and support regulatory compliance.",
   "srv.s6.label": "Our services cover:",
   "srv.s6.li1": "Identity and Access Management (IAM)",
   "srv.s6.li2": "Multi-Factor Authentication (MFA)",
@@ -308,7 +360,8 @@ const LOCALE_EN = {
   "srv.s6.li7": "Regulatory audit readiness",
 
   "srv.s7.title": "Managed Infrastructure & Operations",
-  "srv.s7.desc": "We provide 24/7 enterprise infrastructure support and lifecycle management. All services are delivered under structured SLA frameworks with clearly defined response levels.",
+  "srv.s7.desc":
+    "We provide 24/7 enterprise infrastructure support and lifecycle management. All services are delivered under structured SLA frameworks with clearly defined response levels.",
   "srv.s7.label": "Our services cover:",
   "srv.s7.li1": "24/7 technical support and monitoring",
   "srv.s7.li2": "Incident and problem management",
@@ -318,7 +371,8 @@ const LOCALE_EN = {
   "srv.s7.li6": "Infrastructure performance optimization",
 
   "srv.s8.title": "Development & Product Engineering",
-  "srv.s8.desc": "In addition to infrastructure services, we develop enterprise-grade software and integration solutions that enhance operational efficiency and automation.",
+  "srv.s8.desc":
+    "In addition to infrastructure services, we develop enterprise-grade software and integration solutions that enhance operational efficiency and automation.",
   "srv.s8.label": "Capabilities include:",
   "srv.s8.li1": "Custom enterprise software development",
   "srv.s8.li2": "Backend systems and platform integration",
@@ -327,7 +381,8 @@ const LOCALE_EN = {
   "srv.s8.li5": "Internal systems and automation solutions",
 
   "srv.s9.title": "Project & Business Management",
-  "srv.s9.desc": "Our project and account management teams ensure structured delivery and long-term client engagement.",
+  "srv.s9.desc":
+    "Our project and account management teams ensure structured delivery and long-term client engagement.",
   "srv.s9.sub1.title": "Project Management",
   "srv.s9.sub1.li1": "Management of infrastructure and transformation projects",
   "srv.s9.sub1.li2": "Control of timelines, budget, and risk",
@@ -340,11 +395,13 @@ const LOCALE_EN = {
   "srv.s9.sub2.li4": "Environment optimization",
 
   "srv.s10.title": "Legal & Regulatory Advisory",
-  "srv.s10.desc": "Our legal advisory team provides support in areas related to technology governance and regulatory compliance.",
+  "srv.s10.desc":
+    "Our legal advisory team provides support in areas related to technology governance and regulatory compliance.",
   "srv.s10.label": "Services include:",
   "srv.s10.li1": "IT contract advisory",
   "srv.s10.li2": "Data protection and GDPR compliance",
-  "srv.s10.li3": "Preparation for ISO certifications (ISO 9001, ISO 20000-1, ISO 27001, ISO 37001)",
+  "srv.s10.li3":
+    "Preparation for ISO certifications (ISO 9001, ISO 20000-1, ISO 27001, ISO 37001)",
   "srv.s10.li4": "Assistance with EU regulatory requirements",
   "srv.s10.li5": "Software licensing compliance",
   "srv.s10.li6": "Vendor contract structuring and governance",
@@ -449,7 +506,8 @@ const LOCALE_EN = {
   "contact.heading": "Let's Work Together",
   "contact.desc":
     "Discuss your infrastructure, cloud, or hybrid architecture requirements with our engineering team.",
-  "contact.form.agree": "I agree to the processing of my personal data in accordance with the <a href=\"privacy-policy.html\" target=\"_blank\" tabindex=\"-1\">Privacy Policy</a>.",
+  "contact.form.agree":
+    'I agree to the processing of my personal data in accordance with the <a href="privacy-policy.html" target="_blank" tabindex="-1">Privacy Policy</a>.',
   "contact.address": "42 Vitosha Blvd., 1000 Sofia, Bulgaria",
   "contact.form.name": "Name",
   "contact.form.email": "Email",
@@ -458,12 +516,14 @@ const LOCALE_EN = {
   "contact.form.submit": "Send Message",
   "contact.form.captcha.label": "Anti-spam check:",
   "contact.success": "✓ Thank you! We'll be in touch shortly.",
-  "contact.error": "✕ Something went wrong. Please try again or email us directly.",
+  "contact.error":
+    "✕ Something went wrong. Please try again or email us directly.",
   "contact.field.required": "This field is required.",
   "contact.field.email.invalid": "Please enter a valid email address.",
 
   "notfound.heading": "Page not found",
-  "notfound.desc": "The page you are looking for doesn't exist or has been moved.",
+  "notfound.desc":
+    "The page you are looking for doesn't exist or has been moved.",
   "notfound.cta.home": "Back to Home",
   "notfound.cta.contact": "Contact us",
 
@@ -472,29 +532,38 @@ const LOCALE_EN = {
 
   "privacy.eyebrow": "Legal",
   "privacy.title": "Privacy Policy",
-  "privacy.intro": "This Privacy Policy applies to the website of ITRB Ltd. and explains how we collect, use, and protect your personal data in accordance with Regulation (EU) 2016/679 (GDPR).",
+  "privacy.intro":
+    "This Privacy Policy applies to the website of ITRB Ltd. and explains how we collect, use, and protect your personal data in accordance with Regulation (EU) 2016/679 (GDPR).",
 
   "privacy.s1.heading": "Data Controller",
-  "privacy.s1.text": "The data controller within the meaning of Regulation (EU) 2016/679 (GDPR) is ITRB Ltd., UIC 207974798, registered at 42 Vitosha Blvd., Triaditza District, 1000 Sofia, Bulgaria. Contact: <a href=\"mailto:office@itrb.org\">office@itrb.org</a>.",
+  "privacy.s1.text":
+    'The data controller within the meaning of Regulation (EU) 2016/679 (GDPR) is ITRB Ltd., UIC 207974798, registered at 42 Vitosha Blvd., Triaditza District, 1000 Sofia, Bulgaria. Contact: <a href="mailto:office@itrb.org">office@itrb.org</a>.',
 
   "privacy.s2.heading": "Personal Data We Collect",
-  "privacy.s2.text": "When you use the contact form on our website, we may process the following data: your name, email address, phone number (if provided), the content of your message, as well as your IP address and device technical information.",
+  "privacy.s2.text":
+    "When you use the contact form on our website, we may process the following data: your name, email address, phone number (if provided), the content of your message, as well as your IP address and device technical information.",
 
   "privacy.s3.heading": "How We Use Your Data",
-  "privacy.s3.text": "Your data is processed solely for the purpose of responding to enquiries submitted via the contact form, communicating with clients and partners, providing information about our services, and complying with applicable legal obligations.",
+  "privacy.s3.text":
+    "Your data is processed solely for the purpose of responding to enquiries submitted via the contact form, communicating with clients and partners, providing information about our services, and complying with applicable legal obligations.",
 
   "privacy.s4.heading": "Legal Basis for Processing",
-  "privacy.s4.text": "Processing is carried out on the basis of Art. 6(1)(f) GDPR — legitimate interests related to maintaining business communications — or on the basis of Art. 6(1)(a) GDPR — the user's explicit consent, where applicable.",
+  "privacy.s4.text":
+    "Processing is carried out on the basis of Art. 6(1)(f) GDPR — legitimate interests related to maintaining business communications — or on the basis of Art. 6(1)(a) GDPR — the user's explicit consent, where applicable.",
 
   "privacy.s5.heading": "Data Retention",
-  "privacy.s5.text": "Personal data is retained for the period necessary to handle the relevant enquiry — as a rule, no longer than 12 months. A longer retention period may apply where required by law.",
+  "privacy.s5.text":
+    "Personal data is retained for the period necessary to handle the relevant enquiry — as a rule, no longer than 12 months. A longer retention period may apply where required by law.",
 
   "privacy.s6.heading": "Who Has Access to Your Data",
-  "privacy.s6.text": "Your data may be processed by hosting and technical service providers, IT support specialists, and competent public or regulatory authorities — only where required by law.",
+  "privacy.s6.text":
+    "Your data may be processed by hosting and technical service providers, IT support specialists, and competent public or regulatory authorities — only where required by law.",
 
   "privacy.s7.heading": "Your Rights",
-  "privacy.s7.text": "Under GDPR, you have the right to access your personal data, request correction of inaccurate information, erasure, restriction of processing, or to object to processing. You also have the right to lodge a complaint with the <a href=\"https://www.cpdp.bg/\" target=\"_blank\" rel=\"noopener\">Commission for Personal Data Protection (CPDP)</a>.",
+  "privacy.s7.text":
+    'Under GDPR, you have the right to access your personal data, request correction of inaccurate information, erasure, restriction of processing, or to object to processing. You also have the right to lodge a complaint with the <a href="https://www.cpdp.bg/" target="_blank" rel="noopener">Commission for Personal Data Protection (CPDP)</a>.',
 
   "privacy.s8.heading": "Contact Us",
-  "privacy.s8.text": "For any questions regarding the processing of your personal data, please contact ITRB Ltd. at <a href=\"mailto:office@itrb.org\">office@itrb.org</a>.",
+  "privacy.s8.text":
+    'For any questions regarding the processing of your personal data, please contact ITRB Ltd. at <a href="mailto:office@itrb.org">office@itrb.org</a>.',
 };
