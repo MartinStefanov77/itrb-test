@@ -155,7 +155,7 @@ export default function ContactsContent() {
       formData.append("website", values.website);
       formData.append("agree", values.agree ? "on" : "");
 
-      const res = await fetch("/contact.php", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         body: formData,
       });
