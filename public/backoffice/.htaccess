@@ -1,7 +1,0 @@
-AddHandler ${application/x-httpd-itrborgi-php84} .php .php5 .phtml .php7 .php8
-#order deny,allow
-#deny from all
-#allow from 212.5.132.186
-# php -- BEGIN cPanel-generated handler, do not edit
-# This domain inherits the “PHP” package.
-# php -- END cPanel-generated handler, do not edit
