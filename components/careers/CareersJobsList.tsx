@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CareersJob } from "./types";
 import styles from "./CareersJobsList.module.scss";
-
+  import { useI18n } from "@/lib/i18n";
+ 
 type FiltersCopy = {
   departmentLabel: string;
   departmentAllLabel: string;
@@ -14,9 +15,10 @@ type FiltersCopy = {
 
 export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters: FiltersCopy }) {
   const [department, setDepartment] = useState("");
-  const [query, setQuery] = useState("");
+   const [query, setQuery] = useState("");
   const [deptOpen, setDeptOpen] = useState(false);
   const deptDropdownRef = useRef<HTMLDivElement | null>(null);
+  const { currentLang, setLanguage, t } = useI18n();
 
   const departments = useMemo(
     () => [...new Set(jobs.map((job) => job.department))].sort((a, b) => a.localeCompare(b)),
@@ -41,6 +43,8 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
       }
     };
 
+ 
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setDeptOpen(false);
     };
@@ -52,6 +56,8 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
       document.removeEventListener("keydown", onKeyDown);
     };
   }, []);
+  
+
 
   return (
     <>

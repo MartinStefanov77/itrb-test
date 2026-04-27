@@ -1,4 +1,4 @@
-const LOCALE_BG = {
+export const LOCALE_BG = {
   "nav.home": "Начало",
   "nav.about": "За нас",
   "nav.services": "Услуги",

@@ -7,17 +7,16 @@ import { OurEdgeSection } from "@/components/home/OurEdgeSection";
 import { ServicesOverviewSection } from "@/components/home/ServicesOverviewSection";
 import { WhatWeDoSection } from "@/components/home/WhatWeDoSection";
 
-
 export default function Home() {
   return (
     <main id="main-content" data-page="home">
       <HomeRevealInit />
-      <HeroSection {...homeData.hero} />
-      <WhatWeDoSection {...homeData.whatWeDo} />
-      <ServicesOverviewSection {...homeData.servicesOverview} />
-      <OurEdgeSection {...homeData.ourEdge} />
-      <OurApproachSection {...homeData.ourApproach} />
-      <ContactCtaSection {...homeData.contactCta} />
+      <HeroSection />
+      <WhatWeDoSection />
+      <ServicesOverviewSection />
+      <OurEdgeSection />
+      <OurApproachSection />
+      <ContactCtaSection />
     </main>
   );
 }

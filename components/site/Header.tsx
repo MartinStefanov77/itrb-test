@@ -4,13 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/site-data";
+import { useI18n } from "@/lib/i18n";
 import styles from "./Header.module.scss";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { currentLang, setLanguage, t } = useI18n();
 
-  const NavbarRef = useRef<HTMLDivElement>(null)
+  const NavbarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setOpen(false);
@@ -31,33 +33,47 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-useEffect( () => {
-/* ---- Sticky Nav & Active Section ------------------------------------ */
-function onScroll() {
-  NavbarRef.current?.classList.toggle("scrolled", window.scrollY > 40);
-}
+  useEffect(() => {
+    /* ---- Sticky Nav & Active Section ------------------------------------ */
+    function onScroll() {
+      NavbarRef.current?.classList.toggle("scrolled", window.scrollY > 40);
+    }
 
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
-}, [])
-
-
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }, []);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
-    if (href === "/careers") return pathname === "/careers" || pathname.startsWith("/careers-job/");
+    if (href === "/careers")
+      return pathname === "/careers" || pathname.startsWith("/careers-job/");
     return pathname === href;
   };
 
   return (
     <header className={`${styles.header} ${open ? styles.menuOpen : ""}`}>
-      <nav id="navbar" className="scrolled" aria-label="Main navigation" ref={NavbarRef}>
+      <nav
+        id="navbar"
+        className="scrolled"
+        aria-label="Main navigation"
+        ref={NavbarRef}
+      >
         <div className="nav-inner">
           <Link href="/" className="nav-logo" onClick={() => setOpen(false)}>
-            <img src="/images/logo-white.svg" alt="ITRB" className="logo-img" width={171} height={38} />
+            <img
+              src="/images/logo-white.svg"
+              alt="ITRB"
+              className="logo-img"
+              width={171}
+              height={38}
+            />
           </Link>
 
-          <ul className={`nav-links ${open ? "open" : ""}`} id="navLinks" aria-hidden={open ? "false" : "true"}>
+          <ul
+            className={`nav-links ${open ? "open" : ""}`}
+            id="navLinks"
+            aria-hidden={open ? "false" : "true"}
+          >
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -65,7 +81,7 @@ onScroll();
                   className={isActive(item.href) ? "active" : ""}
                   onClick={() => setOpen(false)}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </Link>
               </li>
             ))}
@@ -73,15 +89,29 @@ onScroll();
 
           <div className="nav-actions">
             <div className="lang-switcher">
-              <button className="lang-btn active" data-lang="en" aria-label="Switch to English">
+              <button
+                className={`lang-btn ${currentLang === "en" ? "active" : ""}`}
+                data-lang="en"
+                onClick={() => setLanguage("en")}
+                aria-label="Switch to English"
+              >
                 EN
               </button>
               <span className="lang-sep">/</span>
-              <button className="lang-btn" data-lang="bg" aria-label="Превключи на Български">
+              <button
+                className={`lang-btn ${currentLang === "bg" ? "active" : ""}`}
+                data-lang="bg"
+                onClick={() => setLanguage("bg")}
+                aria-label="Превключи на Български"
+              >
                 BG
               </button>
             </div>
-            <button className={`hamburger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
+            <button
+              className={`hamburger ${open ? "open" : ""}`}
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -89,7 +119,11 @@ onScroll();
           </div>
         </div>
       </nav>
-      <div className={`nav-backdrop ${open ? "visible" : ""}`} onClick={() => setOpen(false)} aria-hidden="true"></div>
+      <div
+        className={`nav-backdrop ${open ? "visible" : ""}`}
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+      ></div>
     </header>
   );
 }

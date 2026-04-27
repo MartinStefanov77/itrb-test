@@ -49,4 +49,12 @@ export default buildConfig({
   }),
   sharp,
   plugins: [],
+  localization: {
+    locales: [
+      { code: "en", label: "English" },
+      { code: "bg", label: "Bulgarian" },
+    ],
+    defaultLocale: "en",
+    fallback: true,
+  },
 });
