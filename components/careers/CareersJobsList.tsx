@@ -29,7 +29,7 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
     const q = query.trim().toLowerCase();
     return jobs.filter((job) => {
       const matchesDepartment = !department || job.department === department;
-      const matchesSearch = !q || `${job.title} ${job.summary}`.toLowerCase().includes(q);
+      const matchesSearch = !q || `${job.title}`.toLowerCase().includes(q);
       return matchesDepartment && matchesSearch;
     });
   }, [jobs, department, query]);

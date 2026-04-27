@@ -3,7 +3,6 @@ export type CareersJob = {
   title: string;
   department: string;
   location: string;
-  summary: string;
 };
 
 export type CareersData = {
