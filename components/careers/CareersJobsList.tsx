@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CareersJob } from "./types";
 import styles from "./CareersJobsList.module.scss";
-  import { useI18n } from "@/lib/i18n";
- 
+import { useI18n } from "@/lib/i18n";
+
 type FiltersCopy = {
   departmentLabel: string;
   departmentAllLabel: string;
@@ -13,16 +13,25 @@ type FiltersCopy = {
   searchPlaceholder: string;
 };
 
-export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters: FiltersCopy }) {
+export function CareersJobsList({
+  jobs,
+  filters,
+}: {
+  jobs: CareersJob[];
+  filters: FiltersCopy;
+}) {
   const [department, setDepartment] = useState("");
-   const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");
   const [deptOpen, setDeptOpen] = useState(false);
   const deptDropdownRef = useRef<HTMLDivElement | null>(null);
   const { currentLang, setLanguage, t } = useI18n();
 
   const departments = useMemo(
-    () => [...new Set(jobs.map((job) => job.department))].sort((a, b) => a.localeCompare(b)),
-    [jobs]
+    () =>
+      [...new Set(jobs.map((job) => job.department))].sort((a, b) =>
+        a.localeCompare(b),
+      ),
+    [jobs],
   );
 
   const filteredJobs = useMemo(() => {
@@ -43,8 +52,6 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
       }
     };
 
- 
-
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setDeptOpen(false);
     };
@@ -56,18 +63,25 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
       document.removeEventListener("keydown", onKeyDown);
     };
   }, []);
-  
-
 
   return (
     <>
-      <form className={`careers-filters ${styles.filters}`} onSubmit={(e) => e.preventDefault()}>
+      <form
+        className={`careers-filters ${styles.filters}`}
+        onSubmit={(e) => e.preventDefault()}
+      >
         <div className="careers-filters__grid">
           <div className="careers-filters__field">
-            <label className="careers-filters__label" htmlFor="careers-dd-dept-trigger">
+            <label
+              className="careers-filters__label"
+              htmlFor="careers-dd-dept-trigger"
+            >
               {filters.departmentLabel}
             </label>
-            <div className={`careers-dd ${deptOpen ? "is-open" : ""}`} ref={deptDropdownRef}>
+            <div
+              className={`careers-dd ${deptOpen ? "is-open" : ""}`}
+              ref={deptDropdownRef}
+            >
               <div className="careers-dd__bar">
                 <button
                   type="button"
@@ -78,7 +92,9 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
                   aria-controls="careers-dd-dept-list"
                   onClick={() => setDeptOpen((v) => !v)}
                 >
-                  <span className="careers-dd__value">{department || filters.departmentAllLabel}</span>
+                  <span className="careers-dd__value">
+                    {department || filters.departmentAllLabel}
+                  </span>
                 </button>
                 <button
                   type="button"
@@ -100,7 +116,10 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
                   aria-hidden="true"
                   onClick={() => setDeptOpen((v) => !v)}
                 >
-                  <span className="careers-dd__chevron" aria-hidden="true"></span>
+                  <span
+                    className="careers-dd__chevron"
+                    aria-hidden="true"
+                  ></span>
                 </button>
               </div>
 
@@ -156,6 +175,15 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
       </form>
 
       <div className={`careers-list ${styles.results}`}>
+        {filteredJobs.length === 0 && (
+          <p
+            id="careers-list-empty"
+            className="careers-list-empty"
+            data-i18n="careers.listEmpty"
+          >
+            No positions match your filters.
+          </p>
+        )}
         {filteredJobs.map((job) => (
           <article key={job.slug} className="careers-job-card">
             <div className="careers-card-main">
@@ -165,7 +193,10 @@ export function CareersJobsList({ jobs, filters }: { jobs: CareersJob[]; filters
               </p>
             </div>
             <div className="careers-card-aside">
-              <Link href={`/careers-job/${job.slug}`} className="btn btn-outline btn-sm">
+              <Link
+                href={`/careers-job/${job.slug}`}
+                className="btn btn-outline btn-sm"
+              >
                 View details
               </Link>
             </div>
