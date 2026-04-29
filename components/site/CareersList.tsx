@@ -38,7 +38,7 @@ export function CareersList({ jobs }: { jobs: Job[] }) {
         </div>
       </form>
 
-      <div className="careers-list">
+      <div className="careers-list">       
         {filtered.map((job) => (
           <article key={job.slug} className="careers-job-card">
             <div className="careers-card-main">
