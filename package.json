@@ -9,7 +9,9 @@
     "start": "next start",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.83.0",
