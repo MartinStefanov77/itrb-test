@@ -1,20 +1,46 @@
+'use client'
 
 import { CareersPage } from "@/components/careers/CareersPage";
 import type { CareersData } from "@/components/careers/types";
-import { getPayload } from "payload";
 
-import config from '@payload-config'
+import { useEffect, useState } from "react";
+import { useI18n } from "@/lib/i18n";
 
-export default async function CareersRoute() {
+export default function CareersRoute() {
+
+  const [newJobPositions, setNewJobPositions] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const { currentLang: lang, t } = useI18n();
 
 
+  useEffect(() => {
+    const fetchCareers = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+        const response = await fetch(`/api/careers-list?locale=${lang}`)
 
-  const payload = await getPayload({ config })
+        if (!response.ok) {
+          throw new Error('Failed to fetch tests')
+        }
 
-  const newJobPositions = await payload.find({
-    collection: 'new-job-positions',
-    locale: 'en'
-  })   
+        const data = await response.json()
+        setNewJobPositions(data.docs || [])
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error occurred')
+        console.error('Error fetching tests:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchCareers()
+  }, [lang])
+
+
+  console.log(newJobPositions)
+
 
   const careersData = {
     "hero": {
@@ -27,7 +53,7 @@ export default async function CareersRoute() {
       "searchLabel": "Search",
       "searchPlaceholder": "Search by title..."
     },
-    "jobs": newJobPositions.docs.map( job => ({
+    "jobs": newJobPositions.map( job => ({
       "slug": job.slug,
         "title": job.title,
         "department": typeof job.department === "object" && job.department !== null
@@ -36,7 +62,6 @@ export default async function CareersRoute() {
         "location": job.location,
     }))   
   }
-
   
-  return <CareersPage data={careersData as CareersData} />;
+  return <CareersPage data={careersData as CareersData} />
 }
