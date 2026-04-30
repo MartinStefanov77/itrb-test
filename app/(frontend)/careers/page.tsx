@@ -38,15 +38,14 @@ export default function CareersRoute() {
 
   const careersData = {
     hero: {
-      title: "Careers",
-      intro:
-        "We provide opportunities for professionals at different stages of their journey.",
+      title: "careers.hero.title",
+      intro: "careers.hero.intro",
     },
     filters: {
-      departmentLabel: "Department",
-      departmentAllLabel: "All departments",
-      searchLabel: "Search",
-      searchPlaceholder: "Search by title...",
+      departmentLabel: "careers.filter.department",
+      departmentAllLabel: "careers.filter.departmentAll",
+      searchLabel: "careers.filter.search",
+      searchPlaceholder: "careers.filter.searchPlaceholder",
     },
     jobs: (newJobPositions as any[]).map((job) => ({
       slug: job.slug,

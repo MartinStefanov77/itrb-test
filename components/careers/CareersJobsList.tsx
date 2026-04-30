@@ -29,9 +29,9 @@ export function CareersJobsList({
   const departments = useMemo(
     () =>
       [...new Set(jobs.map((job) => job.department))].sort((a, b) =>
-        a.localeCompare(b),
+        a.localeCompare(b)
       ),
-    [jobs],
+    [jobs]
   );
 
   const filteredJobs = useMemo(() => {
@@ -76,7 +76,7 @@ export function CareersJobsList({
               className="careers-filters__label"
               htmlFor="careers-dd-dept-trigger"
             >
-              {filters.departmentLabel}
+              {t(filters.departmentLabel)}
             </label>
             <div
               className={`careers-dd ${deptOpen ? "is-open" : ""}`}
@@ -93,7 +93,7 @@ export function CareersJobsList({
                   onClick={() => setDeptOpen((v) => !v)}
                 >
                   <span className="careers-dd__value">
-                    {department || filters.departmentAllLabel}
+                    {department || t(filters.departmentAllLabel)}
                   </span>
                 </button>
                 <button
@@ -138,7 +138,7 @@ export function CareersJobsList({
                     setDeptOpen(false);
                   }}
                 >
-                  {filters.departmentAllLabel}
+                  {t(filters.departmentAllLabel)}
                 </li>
                 {departments.map((value) => (
                   <li
@@ -160,13 +160,13 @@ export function CareersJobsList({
 
           <div className="careers-filters__field careers-filters__field--search">
             <label className="careers-filters__label" htmlFor="careers-search">
-              {filters.searchLabel}
+              {t(filters.searchLabel)}
             </label>
             <input
               id="careers-search"
               className="careers-search-input"
               type="search"
-              placeholder={filters.searchPlaceholder}
+              placeholder={t(filters.searchPlaceholder)}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
@@ -181,7 +181,7 @@ export function CareersJobsList({
             className="careers-list-empty"
             data-i18n="careers.listEmpty"
           >
-            No positions match your filters.
+            {t("careers.listEmpty")}
           </p>
         )}
         {filteredJobs.map((job) => (

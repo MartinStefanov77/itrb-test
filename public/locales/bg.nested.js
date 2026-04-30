@@ -24,6 +24,7 @@ export const LOCALE_BG = {
     filter: {
       city: "Град",
       department: "Отдел",
+      departmentAll: "Всички отдели",
       search: "Търсене",
       searchPlaceholder: "Търсене по длъжност…",
       all: "Всички",
