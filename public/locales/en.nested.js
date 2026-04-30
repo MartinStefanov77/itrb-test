@@ -24,6 +24,7 @@ export const LOCALE_EN = {
     filter: {
       city: "City",
       department: "Department",
+      departmentAll: "All departments",
       search: "Search",
       searchPlaceholder: "Search by job title…",
       all: "All",

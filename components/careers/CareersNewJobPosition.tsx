@@ -50,7 +50,7 @@ const CareersNewJobPosition = ({ slug }: { slug: string }) => {
         <header className="careers-job-header">
           <div className="container careers-job-header-inner">
             <Link href="/careers" className="careers-back">
-              ← All open positions
+              {t("careers.backToList")}
             </Link>
             <h1 className="careers-job-title">{job.title}</h1>
             <p className="careers-job-meta">
@@ -59,12 +59,16 @@ const CareersNewJobPosition = ({ slug }: { slug: string }) => {
 
             <div className="careers-job-body">
               <section className="careers-job-section">
-                <h2 className="careers-job-section-title">Your role</h2>
+                <h2 className="careers-job-section-title">
+                  {t("careers.section.responsibilities")}
+                </h2>
 
                 <RenderHTML data={job["yourRole"]!} className="careers-prose" />
               </section>
               <section className="careers-job-section">
-                <h2 className="careers-job-section-title">Requirements</h2>
+                <h2 className="careers-job-section-title">
+                  {t("careers.section.requirements")}
+                </h2>
 
                 <RenderHTML
                   data={job["requirements"]!}
@@ -72,13 +76,14 @@ const CareersNewJobPosition = ({ slug }: { slug: string }) => {
                 />
               </section>
               <section className="careers-job-section">
-                <h2 className="careers-job-section-title">What we offer</h2>
+                <h2 className="careers-job-section-title">
+                  {t("careers.section.offer")}
+                </h2>
 
                 <RenderHTML data={job.whatWeOffer!} className="careers-prose" />
               </section>
               <p className="careers-job-note">
-                We treat all applications confidentially. Only shortlisted
-                candidates will be contacted for an interview.
+                {t("careers.detail.confidentialNote")}
               </p>
             </div>
           </div>
@@ -89,10 +94,10 @@ const CareersNewJobPosition = ({ slug }: { slug: string }) => {
             aria-labelledby="careers-j1-cta-title"
           >
             <h2 id="careers-j1-cta-title" className="careers-job-cta-title">
-              Apply for this position
+              {t("careers.detail.applyCtaTitle")}
             </h2>
             <p className="careers-job-cta-sub">
-              We will contact you if your profile is a good fit for the role.
+              {t("careers.detail.applyCtaSub")}
             </p>
             <a
               href={job.applyUrl!}
@@ -100,7 +105,7 @@ const CareersNewJobPosition = ({ slug }: { slug: string }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Apply
+              {t("careers.detail.tabApply")}
             </a>
           </aside>
         </div>
