@@ -10,7 +10,6 @@ import { Media } from "./collections/Media";
 import { NewJobPositions } from "./collections/NewJobPositions";
 import { Departments } from "./collections/Departments";
 
-
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
@@ -25,16 +24,15 @@ export default buildConfig({
   localization: {
     locales: [
       {
-        label: 'English',
-        code: 'en',
+        label: "English",
+        code: "en",
       },
       {
-        label: 'Bulgarian',
-        code: 'bg',
-        
+        label: "Bulgarian",
+        code: "bg",
       },
     ],
-    defaultLocale: 'bg', // required
+    defaultLocale: "bg", // required
     fallback: true, // defaults to true
   },
   editor: lexicalEditor(),
@@ -49,12 +47,4 @@ export default buildConfig({
   }),
   sharp,
   plugins: [],
-  localization: {
-    locales: [
-      { code: "en", label: "English" },
-      { code: "bg", label: "Bulgarian" },
-    ],
-    defaultLocale: "en",
-    fallback: true,
-  },
 });
