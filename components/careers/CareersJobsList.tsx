@@ -197,7 +197,7 @@ export function CareersJobsList({
                 href={`/careers-job/${job.slug}`}
                 className="btn btn-outline btn-sm"
               >
-                View details
+                {t("careers.card.viewDetails")}
               </Link>
             </div>
           </article>
