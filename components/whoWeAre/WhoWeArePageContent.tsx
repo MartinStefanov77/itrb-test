@@ -10,8 +10,6 @@ import { SectionHeader } from "@/components/layout/SectionHeader";
 import { useI18n } from "@/lib/i18n";
 import { TeamSlider } from "./TeamSlider";
 
-import whoWeAreData from "@/data/who-we-are.json";
-
 const LIFECYCLE_KEYS = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
 const PRINCIPLE_KEYS = ["p1", "p2", "p3", "p4", "p5"] as const;
 const INDUSTRY_KEYS = ["i1", "i2", "i3", "i4", "i5"] as const;

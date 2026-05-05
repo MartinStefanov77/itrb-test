@@ -1,4 +1,3 @@
-import homeData from "@/data/home.json";
 import { ContactCtaSection } from "@/components/home/ContactCtaSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { HomeRevealInit } from "@/components/home/HomeRevealInit";
