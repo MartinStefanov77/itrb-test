@@ -19,6 +19,12 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      graphics: {
+        Icon: "./components/payload/AdminIcon.tsx#default", // or #AdminIcon for named export
+        Logo: "./components/payload/AdminLogo.tsx#default",
+      },
+    },
   },
   collections: [Users, Media, NewJobPositions, Departments],
   localization: {
