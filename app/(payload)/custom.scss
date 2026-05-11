@@ -1,0 +1,20 @@
+/* Size */
+.adminLogo__svg {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+/* Theme via currentColor */
+.adminLogo {
+  color: #111; /* light */
+}
+/* If you want to use system preference */
+@media (prefers-color-scheme: dark) {
+  .adminLogo {
+    color: #fff;
+  }
+}
+
+.step-nav__home {
+  width: 49px;
+}
