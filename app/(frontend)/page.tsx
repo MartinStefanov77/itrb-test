@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { HomeRevealInit } from "@/components/home/HomeRevealInit";
 import { OurApproachSection } from "@/components/home/OurApproachSection";
 import { OurEdgeSection } from "@/components/home/OurEdgeSection";
-import { ServicesOverviewSection } from "@/components/home/ServicesOverviewSection";
 import { WhatWeDoSection } from "@/components/home/WhatWeDoSection";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <HomeRevealInit />
       <HeroSection />
       <WhatWeDoSection />
-      <ServicesOverviewSection />
       <OurEdgeSection />
       <OurApproachSection />
       <ContactCtaSection />

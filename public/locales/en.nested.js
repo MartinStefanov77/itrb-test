@@ -177,6 +177,8 @@ export const LOCALE_EN = {
       s8desc:
         "Custom enterprise software, system integrations, and automation solutions.",
       cta: "View all services",
+      viewAll: "View all",
+      linkLabel: "View service",
     },
     edge: {
       tag: "Our Edge",
@@ -219,8 +221,8 @@ export const LOCALE_EN = {
       cta: "Learn more",
     },
     cert: {
-      teaser:
-        'Our operations are backed by internationally recognized <a href="who-we-are.html#certificates" class="cert-inline-link">ISO certifications</a>.',
+      teaser: "Our operations are backed by internationally recognized ",
+      link: "ISO certifications",
     },
     contactCta: {
       heading: "Contact us",
@@ -489,8 +491,8 @@ export const LOCALE_EN = {
 
   services: {
     tag: "What We Do",
-    heading: "Our Services",
-    sub: "Comprehensive technology solutions tailored to your business needs.",
+    heading: "Services",
+    sub: "We guide enterprises through the complete technology lifecycle, from design and cloud transformation to secure networking and managed operations.",
     s1: {
       title: "Cloud Infrastructure",
       desc: "We design, deploy, and manage scalable cloud environments on AWS, Azure, and GCP. From architecture planning to full migration, our experts ensure your infrastructure is resilient, secure, and cost-optimized.",

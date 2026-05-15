@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SERVICE_KEYS = [
   "s1",
@@ -19,6 +19,10 @@ const SERVICE_KEYS = [
 export function ServicesAccordion() {
   const { t } = useI18n();
   const [open, setOpen] = useState("s1");
+
+  useEffect(() => {
+    //TODO: MARIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO to apply smooth transition and opening after redirect from homepage
+  }, []);
 
   return (
     <div className="acc-list">
@@ -52,7 +56,11 @@ export function ServicesAccordion() {
         }
 
         return (
-          <div key={key} className={`acc-item ${isOpen ? "is-open" : ""}`}>
+          <div
+            key={key}
+            className={`acc-item ${isOpen ? "is-open" : ""}`}
+            id={`acc-trigger-${key.slice(1)}`}
+          >
             <button
               className="acc-trigger"
               onClick={() => setOpen(isOpen ? "" : key)}

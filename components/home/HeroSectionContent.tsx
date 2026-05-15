@@ -7,13 +7,7 @@ import Link from "next/link";
 export function HeroSectionContent() {
   const { t } = useI18n();
   return (
-    <section className={`hero ${styles.root}`}>
-      <div className="hero-video-wrap" aria-hidden="true">
-        <video id="heroVideo" autoPlay muted loop playsInline>
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="hero-overlay"></div>
-      </div>
+    <section className={`hero ${styles.root}`} id="home">
       <div className="hero-content">
         <h1 className="hero-title">
           <span className="hero-title-line">{t("home.hero.title1")}</span>
