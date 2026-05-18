@@ -27,7 +27,7 @@ export function OurApproachSectionContent() {
                 <p className="cert-home-teaser">
                   {t("home.cert.teaser")}
                   <Link
-                    href="/who-we-are.html#certificates"
+                    href="/who-we-are#certificates"
                     className="cert-inline-link"
                   >
                     {t("home.cert.link")}

@@ -36,7 +36,7 @@ export function Header() {
   useEffect(() => {
     /* ---- Sticky Nav & Active Section ------------------------------------ */
     function onScroll() {
-      NavbarRef.current?.classList.toggle("scrolled", window.scrollY > 40);
+      NavbarRef.current?.classList.toggle("scrolled", window.scrollY > 0);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });

@@ -1,7 +1,9 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
-import { useEffect, useState } from "react";
+import { parseAccordionHash, scrollToAccordionTarget } from "@/lib/utils";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const SERVICE_KEYS = [
   "s1",
@@ -16,13 +18,62 @@ const SERVICE_KEYS = [
   "s10",
 ] as const;
 
+type ServiceKey = (typeof SERVICE_KEYS)[number];
+
+function serviceKeyFromHash(): ServiceKey | null {
+  const n = parseAccordionHash(window.location.hash);
+  if (n == null || n > SERVICE_KEYS.length) return null;
+  return SERVICE_KEYS[n - 1];
+}
+function scrollToService(n: number) {
+  const target = document.getElementById(`acc-trigger-${n}`);
+  const navbar = document.getElementById("navbar");
+  if (!target || !navbar) return;
+  const run = () => scrollToAccordionTarget(target, navbar);
+  run();
+  requestAnimationFrame(run);
+  window.setTimeout(run, 320);
+}
+
 export function ServicesAccordion() {
   const { t } = useI18n();
   const [open, setOpen] = useState("s1");
+  const searchParams = useSearchParams();
 
-  useEffect(() => {
-    //TODO: MARIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO to apply smooth transition and opening after redirect from homepage
+  const applyHash = useCallback(() => {
+    // In applyHash / mount effect:
+    const n = getServiceIndex();
+    if (n != null) {
+      setOpen(SERVICE_KEYS[n - 1]);
+      // Optional: canonical URL without duplicating hash (use replaceState, not Link)
+      window.history.replaceState(null, "", `/services#acc-trigger-${n}`);
+    }
   }, []);
+
+  function getServiceIndex(): number | null {
+    const fromQuery = searchParams.get("acc");
+    if (fromQuery) {
+      const n = Number(fromQuery);
+      if (Number.isFinite(n) && n >= 1 && n <= SERVICE_KEYS.length) return n;
+    }
+    return parseAccordionHash(window.location.hash);
+  }
+
+  // Mount + in-page hash changes
+  useEffect(() => {
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, [applyHash]);
+
+  // Scroll only after the matching panel is open in the DOM
+  useLayoutEffect(() => {
+    const n = parseAccordionHash(window.location.hash);
+    if (n == null) return;
+    const key = SERVICE_KEYS[n - 1];
+    if (open !== key) return;
+    scrollToService(n);
+  }, [open]);
 
   return (
     <div className="acc-list">

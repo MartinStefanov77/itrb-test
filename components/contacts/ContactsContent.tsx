@@ -68,7 +68,8 @@ export default function ContactsContent() {
     loadCaptcha();
   }, []);
 
-  const isValidEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  const isValidEmail = (value: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
   const clearFieldError = (field: keyof ContactFormValues) => {
     setErrors((prev) => {
@@ -95,10 +96,12 @@ export default function ContactsContent() {
 
     if (!values.name.trim()) nextErrors.name = dict.required;
     if (!values.email.trim()) nextErrors.email = dict.required;
-    else if (!isValidEmail(values.email.trim())) nextErrors.email = dict.emailInvalid;
+    else if (!isValidEmail(values.email.trim()))
+      nextErrors.email = dict.emailInvalid;
     if (!values.subject.trim()) nextErrors.subject = dict.required;
     if (!values.message.trim()) nextErrors.message = dict.required;
-    if (!values.captcha_answer.trim()) nextErrors.captcha_answer = dict.required;
+    if (!values.captcha_answer.trim())
+      nextErrors.captcha_answer = dict.required;
     if (!values.agree) nextErrors.agree = dict.required;
 
     setErrors(nextErrors);
@@ -186,7 +189,12 @@ export default function ContactsContent() {
   return (
     <main id="main-content" data-page="contact">
       <RevealInteractions />
-      <section className="section contact">
+      <section className="page-hero page-hero-bg page-hero-wide">
+        <div className="container">
+          <h1 className="page-hero-title">{t("nav.contact")}</h1>
+        </div>
+      </section>
+      <section id="contact" className="section contact">
         <div className="container">
           <div className="contact-grid">
             <div className="contact-info reveal-left">
@@ -208,10 +216,8 @@ export default function ContactsContent() {
                   <a href="mailto:office@itrb.org">office@itrb.org</a>
                 </li>
               </ul>
-              <div className="contact-illustration">
-                <img src="/images/contact.svg" alt="" role="presentation" />
-              </div>
             </div>
+
             <div className="contact-form-wrap reveal-right">
               <form
                 ref={formRef}
@@ -246,10 +252,14 @@ export default function ContactsContent() {
                     value={values.name}
                     onChange={handleTextFieldChange("name")}
                   />
-                  <span className="field-error" id="error-name">{errors.name || ""}</span>
+                  <span className="field-error" id="error-name">
+                    {errors.name || ""}
+                  </span>
                 </div>
 
-                <div className={`form-group ${errors.email ? "has-error" : ""}`}>
+                <div
+                  className={`form-group ${errors.email ? "has-error" : ""}`}
+                >
                   <label htmlFor="email">
                     {t("contact.form.email")}
                     <span className="required-star">*</span>
@@ -264,10 +274,14 @@ export default function ContactsContent() {
                     value={values.email}
                     onChange={handleTextFieldChange("email")}
                   />
-                  <span className="field-error" id="error-email">{errors.email || ""}</span>
+                  <span className="field-error" id="error-email">
+                    {errors.email || ""}
+                  </span>
                 </div>
 
-                <div className={`form-group ${errors.subject ? "has-error" : ""}`}>
+                <div
+                  className={`form-group ${errors.subject ? "has-error" : ""}`}
+                >
                   <label htmlFor="subject">
                     {t("contact.form.subject")}
                     <span className="required-star">*</span>
@@ -282,10 +296,14 @@ export default function ContactsContent() {
                     value={values.subject}
                     onChange={handleTextFieldChange("subject")}
                   />
-                  <span className="field-error" id="error-subject">{errors.subject || ""}</span>
+                  <span className="field-error" id="error-subject">
+                    {errors.subject || ""}
+                  </span>
                 </div>
 
-                <div className={`form-group ${errors.message ? "has-error" : ""}`}>
+                <div
+                  className={`form-group ${errors.message ? "has-error" : ""}`}
+                >
                   <label htmlFor="message">
                     {t("contact.form.message")}
                     <span className="required-star">*</span>
@@ -300,7 +318,9 @@ export default function ContactsContent() {
                     value={values.message}
                     onChange={handleTextFieldChange("message")}
                   />
-                  <span className="field-error" id="error-message">{errors.message || ""}</span>
+                  <span className="field-error" id="error-message">
+                    {errors.message || ""}
+                  </span>
                 </div>
 
                 <div
@@ -334,10 +354,14 @@ export default function ContactsContent() {
                     value={captcha.token}
                     readOnly
                   />
-                  <span className="field-error" id="error-captcha">{errors.captcha_answer || ""}</span>
+                  <span className="field-error" id="error-captcha">
+                    {errors.captcha_answer || ""}
+                  </span>
                 </div>
 
-                <div className={`form-group form-group--checkbox ${errors.agree ? "has-error" : ""}`}>
+                <div
+                  className={`form-group form-group--checkbox ${errors.agree ? "has-error" : ""}`}
+                >
                   <label className="checkbox-label">
                     <input
                       ref={agreeRef}
@@ -371,7 +395,9 @@ export default function ContactsContent() {
                       <span className="required-star">*</span>
                     </span>
                   </label>
-                  <span className="field-error" id="error-agree">{errors.agree || ""}</span>
+                  <span className="field-error" id="error-agree">
+                    {errors.agree || ""}
+                  </span>
                 </div>
 
                 <button

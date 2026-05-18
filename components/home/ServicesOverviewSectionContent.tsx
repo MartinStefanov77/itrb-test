@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export function ServicesOverviewSectionContent() {
   const { t } = useI18n();
+  const HOME_SERVICE_IDS = [1, 2, 3, 4] as const;
 
   return (
     <section id="services-overview" className="section services-overview">
@@ -23,42 +24,20 @@ export function ServicesOverviewSectionContent() {
             </div>
           </div>
           <div className="services-overview-links">
-            <Link
-              href="/services#acc-trigger-1"
-              className="service-link-card reveal-up"
-            >
-              <h3 className="service-link-title">{t("srv.s1.title")}</h3>
-              <span className="service-link-more">
-                {t("home.services.linkLabel")}
-              </span>
-            </Link>
-            <Link
-              href="/services#acc-trigger-2"
-              className="service-link-card reveal-up"
-            >
-              <h3 className="service-link-title">{t("srv.s2.title")}</h3>
-              <span className="service-link-more">
-                {t("home.services.linkLabel")}
-              </span>
-            </Link>
-            <Link
-              href="/services#acc-trigger-3"
-              className="service-link-card reveal-up"
-            >
-              <h3 className="service-link-title">{t("srv.s3.title")}</h3>
-              <span className="service-link-more">
-                {t("home.services.linkLabel")}
-              </span>
-            </Link>
-            <Link
-              href="/services#acc-trigger-4"
-              className="service-link-card reveal-up"
-            >
-              <h3 className="service-link-title">{t("srv.s4.title")}</h3>
-              <span className="service-link-more">
-                {t("home.services.linkLabel")}
-              </span>
-            </Link>
+            {HOME_SERVICE_IDS.map((n) => (
+              <Link
+                key={n}
+                // href={`/services#acc-trigger-${n}`}
+                href={`/services?acc=${n}`} // no hash in href
+                scroll={false}
+                className="service-link-card reveal-up"
+              >
+                <h3 className="service-link-title">{t(`srv.s${n}.title`)}</h3>
+                <span className="service-link-more">
+                  {t("home.services.linkLabel")}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

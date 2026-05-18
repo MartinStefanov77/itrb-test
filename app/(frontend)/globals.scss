@@ -278,12 +278,12 @@ button:focus-visible,
 .btn-primary {
   background: var(--brand-300);
   color: var(--main-900);
-  border: 2px solid transparent;
 }
 
 .contact-form-wrap .btn-primary {
   background: var(--main-300);
   color: var(--white);
+  border: 2px solid transparent;
 }
 
 .contact-form-wrap .btn-primary:hover,
@@ -361,10 +361,12 @@ button:focus-visible,
   background: rgba(11, 18, 32, 0.96);
   backdrop-filter: blur(12px);
   transition:
+    height var(--transition),
     background var(--transition),
     box-shadow var(--transition);
 }
 #navbar.scrolled {
+  height: 60px;
   background: rgba(11, 18, 32, 0.96);
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 32px rgba(0, 0, 0, 0.4);
@@ -380,9 +382,11 @@ button:focus-visible,
   gap: 32px;
 }
 .nav-logo .logo-img {
-  height: 38px;
+  height: 28px;
   width: auto;
+  transition: height var(--transition);
 }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -1417,13 +1421,13 @@ button:focus-visible,
   width: 100%;
 }
 
-[data-page="careers"] .careers-page-main {
+.careers-page-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-width: 0;
-  background: linear-gradient(to bottom, #d6e4ee 0%, #f8f9fb 100%);
+  background: linear-gradient(to bottom, #d6e4ee 0%, #f8f9fb 100%) !important;
 }
 .page-hero-careers {
   background: linear-gradient(0deg, var(--main-900), var(--main-300));
@@ -3606,7 +3610,10 @@ body[data-page="not-found"] > .footer {
 
 @media (max-width: 768px) {
   :root {
-    --nav-h: 64px;
+    --nav-h: 60px;
+  }
+  #navbar.scrolled {
+    height: var(--nav-h);
   }
   .cert-lightbox {
     height: calc(100vh - 32px);
@@ -3749,9 +3756,6 @@ body[data-page="not-found"] > .footer {
     background: rgba(59, 191, 154, 0.1);
   }
 
-  .nav-logo .logo-img {
-    height: 30px;
-  }
   .nav-inner {
     padding-inline: var(--container-x-padding-mobile);
   }
@@ -4046,9 +4050,7 @@ body[data-page="not-found"] > .footer {
     --nav-h: 60px;
     --container-x-padding-mobile: 16px;
   }
-  .nav-logo .logo-img {
-    height: 30px;
-  }
+
   .hero-title {
     font-size: clamp(1.5rem, 8vw, 2rem);
   }

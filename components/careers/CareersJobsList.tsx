@@ -67,13 +67,14 @@ export function CareersJobsList({
   return (
     <>
       <form
+        id="careers-filters"
         className={`careers-filters ${styles.filters}`}
         onSubmit={(e) => e.preventDefault()}
       >
-        <div className="careers-filters__grid">
-          <div className="careers-filters__field">
+        <div className="careers-filters-grid">
+          <div className="careers-filters-field">
             <label
-              className="careers-filters__label"
+              className="careers-filters-label"
               htmlFor="careers-dd-dept-trigger"
             >
               {t(filters.departmentLabel)}
@@ -82,17 +83,17 @@ export function CareersJobsList({
               className={`careers-dd ${deptOpen ? "is-open" : ""}`}
               ref={deptDropdownRef}
             >
-              <div className="careers-dd__bar">
+              <div className="careers-dd-bar">
                 <button
                   type="button"
-                  className="careers-dd__open"
+                  className="careers-dd-open"
                   id="careers-dd-dept-trigger"
                   aria-haspopup="listbox"
                   aria-expanded={deptOpen ? "true" : "false"}
                   aria-controls="careers-dd-dept-list"
                   onClick={() => setDeptOpen((v) => !v)}
                 >
-                  <span className="careers-dd__value">
+                  <span className="careers-dd-value">
                     {department || t(filters.departmentAllLabel)}
                   </span>
                 </button>
@@ -111,13 +112,13 @@ export function CareersJobsList({
                 </button>
                 <button
                   type="button"
-                  className="careers-dd__chevron-btn"
+                  className="careers-dd-chevron-btn"
                   tabIndex={-1}
                   aria-hidden="true"
                   onClick={() => setDeptOpen((v) => !v)}
                 >
                   <span
-                    className="careers-dd__chevron"
+                    className="careers-dd-chevron"
                     aria-hidden="true"
                   ></span>
                 </button>
@@ -125,13 +126,13 @@ export function CareersJobsList({
 
               <ul
                 id="careers-dd-dept-list"
-                className="careers-dd__panel careers-floating-panel"
+                className="careers-dd-panel careers-floating-panel"
                 role="listbox"
                 hidden={!deptOpen}
               >
                 <li
                   role="option"
-                  className={`careers-dd__option ${department === "" ? "is-selected" : ""}`}
+                  className={`careers-dd-option ${department === "" ? "is-selected" : ""}`}
                   aria-selected={department === "" ? "true" : "false"}
                   onClick={() => {
                     setDepartment("");
@@ -144,7 +145,7 @@ export function CareersJobsList({
                   <li
                     key={value}
                     role="option"
-                    className={`careers-dd__option ${department === value ? "is-selected" : ""}`}
+                    className={`careers-dd-option ${department === value ? "is-selected" : ""}`}
                     aria-selected={department === value ? "true" : "false"}
                     onClick={() => {
                       setDepartment(value);
@@ -158,8 +159,8 @@ export function CareersJobsList({
             </div>
           </div>
 
-          <div className="careers-filters__field careers-filters__field--search">
-            <label className="careers-filters__label" htmlFor="careers-search">
+          <div className="careers-filters-field careers-filters-field--search">
+            <label className="careers-filters-label" htmlFor="careers-search">
               {t(filters.searchLabel)}
             </label>
             <input
@@ -189,13 +190,13 @@ export function CareersJobsList({
             <div className="careers-card-main">
               <h3 className="position-title">{job.title}</h3>
               <p className="position-desc">
-                {job.location} · {job.department}
+                <strong>Location:</strong> {job.location}
               </p>
             </div>
             <div className="careers-card-aside">
               <Link
                 href={`/careers-job/${job.slug}`}
-                className="btn btn-outline btn-sm"
+                className="btn btn-outline-light btn-sm"
               >
                 {t("careers.card.viewDetails")}
               </Link>

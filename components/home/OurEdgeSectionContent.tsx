@@ -10,53 +10,53 @@ export function OurEdgeSectionContent() {
   const { t } = useI18n();
   const sectionRef = useRef<HTMLElement>(null);
 
-  // useEffect(() => {
-  //   const section = sectionRef.current;
-  //   if (!section) return;
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
 
-  //   const cards = Array.from(
-  //     section.querySelectorAll<HTMLElement>(".edge-card")
-  //   );
-  //   if (!cards.length) return;
+    const cards = Array.from(
+      section.querySelectorAll<HTMLElement>(".edge-card")
+    );
+    if (!cards.length) return;
 
-  //   const desktopMq = window.matchMedia(DESKTOP_MQ);
+    const desktopMq = window.matchMedia(DESKTOP_MQ);
 
-  //   const resetCardHeights = () => {
-  //     cards.forEach((card) => {
-  //       card.style.height = "";
-  //     });
-  //   };
+    const resetCardHeights = () => {
+      cards.forEach((card) => {
+        card.style.height = "";
+      });
+    };
 
-  //   const applyEqualHeight = () => {
-  //     resetCardHeights();
+    const applyEqualHeight = () => {
+      resetCardHeights();
 
-  //     if (!desktopMq.matches) return;
+      if (!desktopMq.matches) return;
 
-  //     const maxHeight = cards.reduce(
-  //       (max, card) => Math.max(max, card.offsetHeight),
-  //       0
-  //     );
+      const maxHeight = cards.reduce(
+        (max, card) => Math.max(max, card.offsetHeight),
+        0
+      );
 
-  //     cards.forEach((card) => {
-  //       card.style.height = `${maxHeight}px`;
-  //     });
-  //   };
+      cards.forEach((card) => {
+        card.style.height = `${maxHeight}px`;
+      });
+    };
 
-  //   window.addEventListener("load", applyEqualHeight);
-  //   window.addEventListener("resize", applyEqualHeight);
-  //   window.addEventListener("orientationchange", applyEqualHeight);
-  //   desktopMq.addEventListener("change", applyEqualHeight);
+    window.addEventListener("load", applyEqualHeight);
+    window.addEventListener("resize", applyEqualHeight);
+    window.addEventListener("orientationchange", applyEqualHeight);
+    desktopMq.addEventListener("change", applyEqualHeight);
 
-  //   applyEqualHeight();
+    applyEqualHeight();
 
-  //   return () => {
-  //     window.removeEventListener("load", applyEqualHeight);
-  //     window.removeEventListener("resize", applyEqualHeight);
-  //     window.removeEventListener("orientationchange", applyEqualHeight);
-  //     desktopMq.removeEventListener("change", applyEqualHeight);
-  //     resetCardHeights();
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("load", applyEqualHeight);
+      window.removeEventListener("resize", applyEqualHeight);
+      window.removeEventListener("orientationchange", applyEqualHeight);
+      desktopMq.removeEventListener("change", applyEqualHeight);
+      resetCardHeights();
+    };
+  }, []);
 
   return (
     <section ref={sectionRef} id="our-edge" className={`section edge-board`}>
