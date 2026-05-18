@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { ServicesAccordion } from "./ServicesAccordion";
 import type { ServiceItem } from "./types";
 
@@ -11,7 +12,9 @@ export function ServicesSection() {
               <img src="images/services-bg.jpg" alt="" loading="lazy" />
             </div>
           </aside>
-          <ServicesAccordion />
+          <Suspense>
+            <ServicesAccordion />
+          </Suspense>
         </div>
       </div>
     </section>
