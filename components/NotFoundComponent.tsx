@@ -14,10 +14,10 @@ const NotFoundComponent = () => {
           <h1>{t("notfound.heading")}</h1>
           <p className="not-found-desc">{t("notfound.desc")}</p>
           <div className="not-found-actions">
-            <Link href="/" className="btn btn-primary">
+            <Link href="/" className="btn btn-outline-light">
               {t("notfound.cta.home")}
             </Link>
-            <Link href="/contact" className="btn btn-outline">
+            <Link href="/contact" className="btn btn-outline-light">
               {t("notfound.cta.contact")}
             </Link>
           </div>

@@ -23,8 +23,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-console.log(process.env.SMTP_HOST);
-
 export async function POST(req: NextRequest) {
   // 1. Parse form data
   const formData = await req.formData();
